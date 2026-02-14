@@ -18,10 +18,15 @@ add_executable(crypt_1 main.cpp
         inc/common.hpp
         src/s_box.cpp
         inc/s_box.hpp
-        tests/test2.cpp)
+        tests/test2.cpp
+        inc/loop.hpp
+        src/loop.cpp
+        tests/test3.cpp)
 add_executable(unit_tests
         tests/test1.cpp
         tests/test2.cpp
         src/s_box.cpp
-        src/p_box.cpp)
+        src/p_box.cpp
+        src/loop.cpp
+        tests/test3.cpp)
 target_link_libraries(unit_tests gtest_main)

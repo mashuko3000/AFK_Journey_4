@@ -39,4 +39,15 @@ inline std::string bits_to_string(const std::vector<uint8_t> &bytes)
     return bitstr;
 }
 
+inline std::string bits_to_string(const std::vector<uint8_t> &bytes, size_t n_bits)
+{
+    std::string bitstr;
+    for (size_t i = 0; i < n_bits; i++)
+    {
+        bool bit = (bytes[i >> 3] >> (7 - (i & 7))) & 1;
+        bitstr.push_back(bit ? '1' : '0');
+    }
+    return bitstr;
+}
+
 #endif //CRYPT_1_COMMON_HPP
