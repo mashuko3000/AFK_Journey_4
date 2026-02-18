@@ -1,4 +1,5 @@
 #include "../inc/loop.hpp"
+
 #pragma region a
 std::vector<uint8_t> rotate_left(
         const std::vector<uint8_t>& input,
@@ -10,8 +11,8 @@ std::vector<uint8_t> rotate_left(
 
     validate_input(input, n_bits);
 
-    const size_t n_bytes = (n_bits + 7) >> 3;
     k_shift %= n_bits;
+    const size_t n_bytes = bytes_for_bits(n_bits);
 
     if(k_shift == 0)
     {
@@ -26,15 +27,8 @@ std::vector<uint8_t> rotate_left(
     {
         const size_t src_idx = (i + k_shift) % n_bits;
 
-        const size_t src_byte = src_idx >> 3;
-        const uint8_t src_offset = src_idx & 7; // % 8
-        const uint8_t bit = (input[src_byte] >> (7 - src_offset)) & 1;
-
-        if(bit)
-        {
-            size_t dest_byte = i >> 3;
-            uint8_t dest_offset = i & 7;
-            result[dest_byte] |= (1 << (7 - dest_offset));
+        if (get_bit(input, src_idx)) {
+            set_bit(result, i, true);
         }
         /* //short_version
         uint8_t bit = (input[src_idx >> 3] >> (7 - (src_idx & 7))) & 1;
@@ -110,36 +104,26 @@ std::vector<uint8_t> apply_mask(
 {
     validate_input(input, n_bits);
 
-    const size_t n_bytes = (n_bits + 7) >> 3;
-    const size_t mask_bytes = mask.size();
+    const size_t n_bytes = bytes_for_bits(n_bits);
+    std::vector<uint8_t> result(input.begin(), input.begin() + n_bytes);
 
-    std::vector<uint8_t> result = input;
-    if (result.size() > n_bytes)
+    size_t bytes_to_process = std::min(n_bytes, mask.size());
+
+    for (size_t i = 0; i < bytes_to_process; ++i)
     {
-        result.resize(n_bytes);
-    }
-
-    const size_t common_bytes = (n_bytes < mask_bytes) ? n_bytes : mask_bytes;
-
-    for (size_t i = 0; i < common_bytes; ++i)
-    {
-        const uint8_t m = mask[i];
         switch (op)
         {
-            case mask_operation::And: result[i] &= m; break;
-            case mask_operation::Or:  result[i] |= m; break;
-            case mask_operation::Xor: result[i] ^= m; break;
+            case mask_operation::And: result[i] &= mask[i]; break;
+            case mask_operation::Or:  result[i] |= mask[i]; break;
+            case mask_operation::Xor: result[i] ^= mask[i]; break;
         }
     }
 
-    if (n_bytes > mask_bytes)
+    if (op == mask_operation::And)
     {
-        for (size_t i = mask_bytes; i < n_bytes; ++i)
+        for (size_t i = bytes_to_process; i < n_bytes; ++i)
         {
-            if (op == mask_operation::And)
-            {
-                result[i] = 0;
-            }
+            result[i] = 0;
         }
     }
 
@@ -174,11 +158,9 @@ std::vector<uint8_t> bit_slice(
 
     for (size_t bit_pos = 0; bit_pos < range_len; ++bit_pos)
     {
-        const size_t src_idx = i + bit_pos;
-        const uint8_t bit = ((input[src_idx >> 3] >> (7 - (src_idx & 7))) & 1);
-        if (bit)
+        if (get_bit(input, i + bit_pos))
         {
-            result[bit_pos >> 3] |= (1 << (7 - (bit_pos & 7)));
+            set_bit(result, bit_pos, true);
         }
     }
 
@@ -196,7 +178,8 @@ std::vector<uint8_t> swap_bits(
 {
     validate_input(input, n_bits);
 
-    if (i >= n_bits || j >= n_bits) {
+    if (i >= n_bits || j >= n_bits)
+    {
         throw std::out_of_range("Bit index is out of n_bits range");
     }
 
@@ -204,13 +187,13 @@ std::vector<uint8_t> swap_bits(
 
     std::vector<uint8_t> result = input;
 
-    const uint8_t bit_i = (result[i >> 3] >> (7 - (i & 7))) & 1;
-    const uint8_t bit_j = (result[j >> 3] >> (7 - (j & 7))) & 1;
+    bool bit_i = get_bit(result, i);
+    bool bit_j = get_bit(result, j);
 
     if (bit_i != bit_j)
     {
-        result[i >> 3] ^= (1 << (7 - (i & 7)));
-        result[j >> 3] ^= (1 << (7 - (j & 7)));
+        set_bit(result, i, bit_j);
+        set_bit(result, j, bit_i);
     }
 
     return result;
@@ -230,21 +213,8 @@ std::vector<uint8_t> set_bit(
     {
         throw std::out_of_range("Bit index is out of n_bits range");
     }
-
     std::vector<uint8_t> result = input;
-
-    const size_t  byte_pos = i >> 3;
-    const uint8_t bit_offset = 7 - (i & 7);
-    const uint8_t mask = static_cast<uint8_t>(1 << bit_offset);
-
-    if (state)
-    {
-        result[byte_pos] |= mask;
-    }
-    else
-    {
-        result[byte_pos] &= ~mask;
-    }
+    set_bit(result, i, state);
     return result;
 }
 #pragma endregion
@@ -283,5 +253,32 @@ void trim_unused_bits(
         const uint8_t mask = static_cast<uint8_t>(((1 << last_bits) - 1) << (8 - last_bits));
         result.back() &= mask;
     }
+}
+
+inline bool get_bit(const std::vector<uint8_t>& data, size_t bit_idx)
+{
+    size_t byte_idx = bit_idx >> 3;
+    uint8_t bit_in_byte = 7 - (bit_idx & 7);
+    return (data[byte_idx] & (uint8_t(1) << bit_in_byte)) != 0;
+}
+
+inline void set_bit(std::vector<uint8_t>& data, size_t bit_idx, bool value)
+{
+    size_t byte_idx = bit_idx >> 3;
+    uint8_t bit_in_byte = 7 - (bit_idx & 7);
+    uint8_t mask = uint8_t(1) << bit_in_byte;
+    if (value)
+    {
+        data[byte_idx] |= mask;
+    }
+    else
+    {
+        data[byte_idx] &= ~mask;
+    }
+}
+
+inline const size_t bytes_for_bits(size_t n_bits)
+{
+    return (n_bits + 7) >> 3;
 }
 #pragma endregion

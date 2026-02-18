@@ -52,6 +52,17 @@ std::vector<uint8_t> set_bit(
         const bool state
 );
 
+inline bool get_bit(
+        const std::vector<uint8_t>& data,
+        size_t bit_idx
+        );
+
+inline void set_bit(
+        std::vector<uint8_t>& data,
+        size_t bit_idx,
+        bool value
+        );
+
 void validate_input(
         const std::vector<uint8_t>& input,
         const size_t n_bits
@@ -61,4 +72,6 @@ void trim_unused_bits(
         std::vector<uint8_t>& result,
         const size_t n_bits
 );
+
+inline const size_t bytes_for_bits(size_t n_bits);
 #endif //CRYPT_1_LOOP_HPP
