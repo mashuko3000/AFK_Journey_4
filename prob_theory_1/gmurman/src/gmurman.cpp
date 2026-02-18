@@ -32,14 +32,13 @@ void _6gmurman(const int simulations)
     }
 
     std::cout << "Results (std::rand):\n";
-    std::cout << "a) 1 face:  " << (double)res1 / simulations << "\n";
-    std::cout << "b) 2 faces: " << (double)res2 / simulations << "\n";
+    std::cout << "a) 1_task face:  " << (double)res1 / simulations << "\n";
+    std::cout << "b) s_task faces: " << (double)res2 / simulations << "\n";
     std::cout << "c) 3 faces: " << (double)res3 / simulations << "\n";
 }
 
 void _8gmurman(const int simulations)
 {
-    std::srand(std::time(0));
     const int n = 6;
     int success = 0;
 
@@ -62,7 +61,6 @@ void _8gmurman(const int simulations)
 
 void _13gmurman(const int simulations)
 {
-    std::srand(std::time(0));
     const int n = 100;
     int success = 0;
 
@@ -73,12 +71,11 @@ void _13gmurman(const int simulations)
             success++;
         }
     }
-    std::cout << "Success rate: " << (double)success / simulations << " (Theory: 0.1)" << std::endl;
+    std::cout << "Success rate: " << (double)success / simulations << " (Theory: 0.1_task)" << std::endl;
 }
 
 void _15gmurman(const int simulations)
 {
-    std::srand(std::time(0));
     const int n = 5;
     int success = 0;
 
@@ -99,7 +96,6 @@ void _15gmurman(const int simulations)
 
 void _19gmurman(const int simulations)
 {
-    std::srand(std::time(0));
     int success = 0;
 
     for (int i = 0; i < simulations; ++i)
@@ -128,7 +124,6 @@ void _19gmurman(const int simulations)
 
 void _20gmurman(const int simulations)
 {
-    std::srand(std::time(0));
     int success = 0;
 
     for (int i = 0; i < simulations; ++i)
@@ -157,8 +152,6 @@ void _20gmurman(const int simulations)
 
 void _21gmurman(const int simulations)
 {
-    std::srand(std::time(0));
-
     int suc_a = 0;
     int suc_b = 0;
     int suc_c = 0;
@@ -190,7 +183,6 @@ void _21gmurman(const int simulations)
 
 void _22gmurman(const int simulations)
 {
-    std::srand(std::time(0));
     int success = 0;
 
     for(int i = 0; i < simulations; ++i)
@@ -214,7 +206,6 @@ void _22gmurman(const int simulations)
 }
 void _26gmurman(const int simulations)
 {
-    std::srand(std::time(0));
     int success = 0;
 
     const double L = 20.0;
@@ -234,7 +225,6 @@ void _26gmurman(const int simulations)
 
 void _27gmurman(const int simulations)
 {
-    std::srand(std::time(0));
     int success = 0;
 
     const double L = 100.00;
@@ -254,7 +244,6 @@ void _27gmurman(const int simulations)
 }
 void _28gmurman(const int simulations)
 {
-    std::srand(std::time(0));
     int total_in_big = 0;
     int success = 0;
 
@@ -283,11 +272,10 @@ void _28gmurman(const int simulations)
     }
 
     std::cout << "Simulated Prob: " << (double)success / total_in_big << std::endl;
-    std::cout << "Theoretical Prob (r/R)^2: " << r2 / R2 << std::endl;
+    std::cout << "Theoretical Prob (r/R)^s_task: " << r2 / R2 << std::endl;
 }
 void _29gmurman(const int simulations)
 {
-    std::srand(std::time(0));
     int success = 0;
 
     const double a = 10.0;
@@ -304,11 +292,10 @@ void _29gmurman(const int simulations)
     }
 
     std::cout << "Simulated Prob: " << (double)success / simulations << std::endl;
-    std::cout << "Theoretical Prob (1 - r/a): " << 1.0 - (r / a) << std::endl;
+    std::cout << "Theoretical Prob (1_task - r/a): " << 1.0 - (r / a) << std::endl;
 }
 void _30gmurman(const int simulations)
 {
-    std::srand(std::time(0));
     int success = 0;
 
     const double a = 20.0;
@@ -333,7 +320,6 @@ void _30gmurman(const int simulations)
 
 void _32gmurman(const int simulations)
 {
-    std::srand(std::time(0));
     int total_in_big = 0;
     int success = 0;
 
@@ -366,7 +352,6 @@ void _32gmurman(const int simulations)
 
 void _45gmurman(const int simulations)
 {
-    std::srand(std::time(0));
     int success = 0;
 
     for (int i = 0; i < simulations; ++i)
