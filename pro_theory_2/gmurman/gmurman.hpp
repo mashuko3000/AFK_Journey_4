@@ -19,4 +19,5 @@ void task_68(const int trials);
 void task_69(const int trials);
 void task_70(const int trials);
 
+
 #endif //PRO_THEORY_GMURMAN_HPP
