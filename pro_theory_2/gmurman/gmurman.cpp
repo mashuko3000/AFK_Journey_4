@@ -163,14 +163,180 @@ void task_62(const int trials)
     }
     std::cout << "\nResults for Task 62:\n";
     std::cout << "a) All 4 in triangle: " << (double)count_a / trials << " (Theory: ~0.0292)\n";
-    std::cout << "b) 1 in tri, 1 in each segment: " << (double)count_b / trials << " (Theory: ~0.0741)\n" << std::endl;
+    std::cout << "b) 1 in tri, 1 in each segment: " << (double)count_b / trials << " (Theory: ~0.0741)" << std::endl;
 }
 void task_63(const int trials)
 {
+    int success = 0;
 
+    for(int i = 0; i < trials; ++i)
+    {
+        int part1 = 0;
+        int part2 = 0;
+        int part3 = 0;
+
+        for(int dot = 0; dot < 3; ++dot)
+        {
+            double pos = (double)std::rand() / RAND_MAX;
+
+            if (pos < 1.0 / 3.0) part1++;
+            else if (pos < 2.0 / 3.0) part2++;
+            else part3++;
+        }
+
+        if (part1 == 1 && part2 == 1 && part3 == 1)
+        {
+            success++;
+        }
+    }
+    std::cout << "\nResults for Task 63:\n";
+    std::cout << "Simulated Prob: " << (double)success / trials << "(Theory: ~" << 2.0 / 9.0 << ")" << std::endl;
 }
-void task_65(const int trials);
-void task_67(const int trials);
-void task_68(const int trials);
-void task_69(const int trials);
-void task_70(const int trials);
+void task_65(const int trials)
+{
+    int success = 0;
+    for(int i = 0; i < trials; ++i)
+    {
+        int current_winning = 5;
+        int current_total = 100;
+        int winning_drawn = 0;
+
+        for (int draw = 0; draw < 2; ++draw)
+        {
+            if (std::rand() % current_total < current_winning)
+            {
+                winning_drawn++;
+                current_winning--;
+            }
+            current_total--;
+        }
+
+        if (winning_drawn == 2)
+        {
+            success++;
+        }
+    }
+    std::cout << "\nResults for Task 65 (Lottery):\n";
+    std::cout << "Simulated Prob: " << (double)success / trials << "(Theory: ~" << 1.0 / 495.0 << ")" << std::endl;
+}
+void task_67(const int trials)
+{
+    int success = 0;
+    for(int i = 0; i < trials; ++i)
+    {
+        int current_painted = 6;
+        int current_total = 10;
+        int painted_drawn = 0;
+
+        for (int draw = 0; draw < 4; ++draw)
+        {
+            if (std::rand() % current_total < current_painted)
+            {
+                painted_drawn++;
+                current_painted--;
+            }
+            current_total--;
+        }
+        if (painted_drawn == 4)
+        {
+            success++;
+        }
+    }
+    std::cout << "Results for Task 67:\n";
+    std::cout << "Simulated Prob: " << (double)success / trials << " (Theory ~" << 1.0 / 14.0 << ")" <<std::endl;
+}
+void task_68(const int trials)
+{
+    int success_a = 0;
+    int success_b = 0;
+
+    for (int i = 0; i < trials; ++i)
+    {
+        int urn[] = {1, 2, 3, 4, 5};
+        int drawn[3];
+        int current_size = 5;
+
+        for (int draw = 0; draw < 3; ++draw)
+        {
+            int idx = std::rand() % current_size;
+            drawn[draw] = urn[idx];
+
+            for (int j = idx; j < current_size - 1; ++j)
+            {
+                urn[j] = urn[j + 1];
+            }
+            current_size--;
+        }
+        if (drawn[0] == 1 && drawn[1] == 4 && drawn[2] == 5)
+        {
+            success_a++;
+        }
+        bool has1 = false, has4 = false, has5 = false;
+        for (int j = 0; j < 3; ++j)
+        {
+            if (drawn[j] == 1) has1 = true;
+            if (drawn[j] == 4) has4 = true;
+            if (drawn[j] == 5) has5 = true;
+        }
+        if (has1 && has4 && has5)
+        {
+            success_b++;
+        }
+    }
+
+    std::cout << "Results for Task 68:\n";
+    std::cout << "a) Sequence 1-4-5: " << (double)success_a / trials << " (Theory ~ 0.0167)\n";
+    std::cout << "b) Set {1, 4, 5}: " << (double)success_b / trials << " (Theory ~ 0.1)" << std::endl;
+}
+void task_69(const int trials)
+{
+    int success = 0;
+
+    for (int i = 0; i < trials; ++i)
+    {
+        int known_left = 20;
+        int total_left = 25;
+        int questions_answered = 0;
+        
+        for (int q = 0; q < 3; ++q)
+        {
+            if (std::rand() % total_left < known_left)
+            {
+                questions_answered++;
+                known_left--;
+            }
+            total_left--;
+        }
+        
+        if (questions_answered == 3)
+        {
+            success++;
+        }
+    }
+    std::cout << "\nResults for Task 69:\n";
+    std::cout << "Simulated Prob: " << (double)success / trials << "(Theory~" << 57.0 / 115.0 << ")" << std::endl;
+}
+void task_70(const int trials)
+{
+    int success_a = 0;
+    int success_b = 0;
+
+    for (int i = 0; i < trials; ++i)
+    {
+        int total_a = 10;
+        bool ok_a = true;
+        for (int val = 1; val <= 3; ++val) {
+            if (std::rand() % total_a != 0) {
+                ok_a = false; break;
+            }
+            total_a--;
+        }
+        if (ok_a) success_a++;
+        if (std::rand() % 10 == 0 && std::rand() % 10 == 1 && std::rand() % 10 == 2)
+            success_b++;
+    }
+
+    std::cout << "\nResults for Task 70:\n";
+    std::cout << "a) No return: " << (double)success_a / trials << " (Theory~" << 1.0/720.0 << ")\n";
+    std::cout << "b) With return: " << (double)success_b / trials << " (Theory: 0.001)" << std::endl;
+}
