@@ -275,7 +275,6 @@ void MainWindow::setupGraphLayout() {
 
     nodeBaseSize *= viewScale;
 
-    // --- 3. ОТРИСОВКА РЕБЕР ---
     QPen edgePen(QColor(74, 78, 105, edgeOpacity));
     edgePen.setWidthF(edgeWidth * viewScale);
 
