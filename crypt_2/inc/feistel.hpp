@@ -35,6 +35,10 @@ public:
 
 public:
     // i_cipher methods
+    size_t get_block_size() const
+    {
+        return 8;
+    }
     void setup_keys(const bytes_t & key) override;
 
     bytes_t encrypt_block(const bytes_t & block) override;

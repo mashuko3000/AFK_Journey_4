@@ -20,6 +20,11 @@ public:
     
     virtual ~feistel_with_hooks() = default;
 
+    virtual size_t get_block_size() const
+    {
+        return 8;
+    }
+
     feistel_with_hooks(const feistel_with_hooks&) = delete;
     feistel_with_hooks& operator=(const feistel_with_hooks&) = delete;
 

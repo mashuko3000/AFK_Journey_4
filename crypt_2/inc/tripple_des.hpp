@@ -19,6 +19,7 @@ enum class triple_des_mode
 class triple_des final: public i_cipher
 {
 public:
+    size_t get_block_size() const override { return 8; }
     explicit triple_des(triple_des_mode m = triple_des_mode::EDE3) : mode(m) {}
 private:
     des_cipher des1;

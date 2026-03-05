@@ -23,6 +23,7 @@ class i_cipher
 public:
     virtual ~i_cipher() = default;
     virtual void setup_keys(const bytes_t & key) = 0;
+    virtual size_t get_block_size() const = 0;
 
     virtual bytes_t encrypt_block(const bytes_t & block) = 0;
     virtual bytes_t decrypt_block(const bytes_t & block) = 0;
