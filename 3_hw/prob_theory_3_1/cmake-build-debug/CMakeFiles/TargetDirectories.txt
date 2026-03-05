@@ -1,0 +1,5 @@
+/home/mashuko3000/studying/4_sem/prob_theory_3_1/cmake-build-debug/CMakeFiles/prob_theory_3_1.dir
+/home/mashuko3000/studying/4_sem/prob_theory_3_1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/mashuko3000/studying/4_sem/prob_theory_3_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/mashuko3000/studying/4_sem/prob_theory_3_1/cmake-build-debug/CMakeFiles/prob_theory_3_1_autogen_timestamp_deps.dir
+/home/mashuko3000/studying/4_sem/prob_theory_3_1/cmake-build-debug/CMakeFiles/prob_theory_3_1_autogen.dir
