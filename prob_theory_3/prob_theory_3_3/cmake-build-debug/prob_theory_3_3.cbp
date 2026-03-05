@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="prob_theory_3_3"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j20 -f &quot;/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j20 -f &quot;/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j20 -f &quot;/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="prob_theory_3_3">
+				<Option output="/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug/prob_theory_3_3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mashuko3000/studying/4_sem/prob_theory_3_3"/>
+					<Add directory="/home/mashuko3000/studying/4_sem/prob_theory_3_3/core"/>
+					<Add directory="/home/mashuko3000/studying/4_sem/prob_theory_3_3/models"/>
+					<Add directory="/home/mashuko3000/studying/4_sem/prob_theory_3_3/logic"/>
+					<Add directory="/home/mashuko3000/studying/4_sem/prob_theory_3_3/infrastructure"/>
+					<Add directory="/home/mashuko3000/studying/4_sem/prob_theory_3_3/machines"/>
+					<Add directory="/usr/include/c++/13"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/13"/>
+					<Add directory="/usr/include/c++/13/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/13/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j20 -f &quot;/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 prob_theory_3_3"/>
+					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j20 -f &quot;/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j20 -f &quot;/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="prob_theory_3_3/fast">
+				<Option output="/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug/prob_theory_3_3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mashuko3000/studying/4_sem/prob_theory_3_3"/>
+					<Add directory="/home/mashuko3000/studying/4_sem/prob_theory_3_3/core"/>
+					<Add directory="/home/mashuko3000/studying/4_sem/prob_theory_3_3/models"/>
+					<Add directory="/home/mashuko3000/studying/4_sem/prob_theory_3_3/logic"/>
+					<Add directory="/home/mashuko3000/studying/4_sem/prob_theory_3_3/infrastructure"/>
+					<Add directory="/home/mashuko3000/studying/4_sem/prob_theory_3_3/machines"/>
+					<Add directory="/usr/include/c++/13"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/13"/>
+					<Add directory="/usr/include/c++/13/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/13/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j20 -f &quot;/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 prob_theory_3_3/fast"/>
+					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j20 -f &quot;/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j20 -f &quot;/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j20 -f &quot;/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j20 -f &quot;/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j20 -f &quot;/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j20 -f &quot;/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j20 -f &quot;/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j20 -f &quot;/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j20 -f &quot;/home/mashuko3000/studying/4_sem/prob_theory_3_3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/core/generator/random_generator.cpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/core/generator/random_generator.hpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/factory/factory.cpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/factory/factory.hpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/infrastructure/cli_parser.cpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/infrastructure/cli_parser.hpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/logic/quality_logic/quality_logic.cpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/logic/quality_logic/quality_logic.hpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/logic/stats_logic/stats_logic.cpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/logic/stats_logic/stats_logic.hpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/machines/assembley_machine/assembley_machine.cpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/machines/assembley_machine/assembley_machine.hpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/machines/base_machine/base_machine.cpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/machines/base_machine/base_machine.hpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/machines/recycle_machine/recycle_machine.cpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/machines/recycle_machine/recycle_machine.hpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/main.cpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/models/components/components.cpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/models/components/components.hpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/models/inventory/inventory.cpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/models/inventory/inventory.hpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/models/recipe/recipe.cpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/models/recipe/recipe.hpp">
+			<Option target="prob_theory_3_3"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/4_sem/prob_theory_3_3/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
