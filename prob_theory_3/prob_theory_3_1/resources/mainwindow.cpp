@@ -12,9 +12,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
     setup_ui();
 
-    // Инициализация потока и воркера
     m_workerThread = new QThread(this);
-    m_worker = new simulator_worker(); // Создаем без родителя!
+    m_worker = new simulator_worker();
     m_worker->moveToThread(m_workerThread);
 
     setup_connections();
@@ -199,4 +198,5 @@ void MainWindow::setup_connections() {
     connect(m_worker, &simulator_worker::error_occurred, this, [](const QString& msg){
         QMessageBox::critical(nullptr, "Simulation Error", msg);
     });
+
 }
