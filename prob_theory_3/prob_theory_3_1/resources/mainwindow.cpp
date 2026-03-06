@@ -155,12 +155,11 @@ void MainWindow::setup_ui() {
         }
 
         QPushButton:disabled {
-            background-color: #D0D0D0; /* Чистый светло-серый (Bento-стиль) */
-            color: #8E8E8E;           /* Темно-серый текст */
-            border: 1px solid #C0C0C0; /* Едва заметная рамка */
+            background-color: #D0D0D0;
+            color: #8E8E8E;
+            border: 1px solid #C0C0C0;
         }
 
-        /* Стиль для полей ввода (чтобы тоже не синели) */
         QLineEdit:disabled, QSpinBox:disabled, QComboBox:disabled {
             background-color: #F5F5F5;
             color: #B0B0B0;
@@ -181,7 +180,7 @@ void MainWindow::setup_connections() {
         m_inputPanel->set_controls_enabled(true);
         m_statsPanel->set_progress(0);
     });
-    connect(m_worker, &simulator_worker::stats_updated, m_statsPanel, &statistics_panel::update_stats); // Это обновит нули на панели
+    connect(m_worker, &simulator_worker::stats_updated, m_statsPanel, &statistics_panel::update_stats);
     connect(m_worker, &simulator_worker::progress_updated, m_statsPanel, &statistics_panel::set_progress);
 
     connect(m_worker, &simulator_worker::progress_updated, this, [this](int percent) {
@@ -191,8 +190,7 @@ void MainWindow::setup_connections() {
     });
     connect(m_worker, &simulator_worker::stats_updated, m_statsPanel, &statistics_panel::update_stats);
     connect(m_worker, &simulator_worker::finished, [this](double a, double b, double c, double avg){
-        // Обновляем статистику финальными данными
-        m_statsPanel->update_stats(a, b, c, avg, m_worker->get_total_runs()); // Если добавишь геттер
+        m_statsPanel->update_stats(a, b, c, avg, m_worker->get_total_runs());
     });
     connect(m_worker, &simulator_worker::iteration_ready, m_visualPanel, &visual_panel::display_iteration);
     connect(m_worker, &simulator_worker::error_occurred, this, [](const QString& msg){
@@ -200,3 +198,4 @@ void MainWindow::setup_connections() {
     });
 
 }
+
