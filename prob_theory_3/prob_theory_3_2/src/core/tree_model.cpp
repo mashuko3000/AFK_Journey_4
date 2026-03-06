@@ -30,10 +30,10 @@ node* tree_model::build_recursive(int current_level,
                         build_recursive(current_level + 1, child_L, child_R, proto, p_stay)
                 );
             }
-            catch (...)
+            catch (const std::runtime_error& e)
             {
                 delete current;
-                throw;
+                throw std::runtime_error& e;
             }
         }
     }
@@ -90,4 +90,5 @@ void tree_model::collect_leaves(node* current, std::vector<node*>& leaves) {
     for (auto child : current->children) {
         collect_leaves(child, leaves);
     }
+
 }
