@@ -18,7 +18,7 @@ void MainWindow::setupUi() {
     auto *mainLayout = new QHBoxLayout(centralWidget);
 
     auto *leftPanel = new QVBoxLayout();
-    auto *settingsGroup = new QGroupBox("Параметры");
+    auto *settingsGroup = new QGroupBox("Parameters");
     auto *settingsLayout = new QVBoxLayout(settingsGroup);
 
     m_mSpin = new QSpinBox(); m_mSpin->setRange(2, 10); m_mSpin->setValue(2);
@@ -26,26 +26,26 @@ void MainWindow::setupUi() {
     m_pStaySpin = new QDoubleSpinBox(); m_pStaySpin->setRange(0, 1); m_pStaySpin->setSingleStep(0.05);
 
     m_distCombo = new QComboBox();
-    m_distCombo->addItems({"Равномерное", "Бернулли", "Биномиальное", "Геометрическое"});
+    m_distCombo->addItems({"Uniform", "Bernoulli", "Binomial", "Geometric"});
 
     m_distPParam = new QDoubleSpinBox();
     m_distPParam->setRange(0.01, 0.99);
     m_distPParam->setValue(0.5);
 
-    settingsLayout->addWidget(new QLabel("M (Ветки):"));
+    settingsLayout->addWidget(new QLabel("M (Branches):"));
     settingsLayout->addWidget(m_mSpin);
-    settingsLayout->addWidget(new QLabel("H (Высота):"));
+    settingsLayout->addWidget(new QLabel("H (Height):"));
     settingsLayout->addWidget(m_hSpin);
-    settingsLayout->addWidget(new QLabel("P (Застревание):"));
+    settingsLayout->addWidget(new QLabel("P (Trapped):"));
     settingsLayout->addWidget(m_pStaySpin);
-    settingsLayout->addWidget(new QLabel("Закон распределения:"));
+    settingsLayout->addWidget(new QLabel("Distribution Law:"));
     settingsLayout->addWidget(m_distCombo);
-    settingsLayout->addWidget(new QLabel("P (для закона):"));
+    settingsLayout->addWidget(new QLabel("P (for law):"));
     settingsLayout->addWidget(m_distPParam);
 
-    auto *btnStep = new QPushButton("Один шаг");
-    auto *btnRun = new QPushButton("10 000 итераций");
-    auto *btnReset = new QPushButton("Сбросить дерево");
+    auto *btnStep = new QPushButton("One Step");
+    auto *btnRun = new QPushButton("10,000 Iterations");
+    auto *btnReset = new QPushButton("Reset Tree");
 
     leftPanel->addWidget(settingsGroup);
     leftPanel->addWidget(btnStep);
@@ -62,7 +62,7 @@ void MainWindow::setupUi() {
     m_statsText->setReadOnly(true);
     m_statsText->setMaximumHeight(150);
 
-    rightLayout->addWidget(new QLabel("Визуализация:"));
+    rightLayout->addWidget(new QLabel("Visualization:"));
     rightLayout->addWidget(m_view, 1);
     rightLayout->addWidget(m_statsText);
 
@@ -156,9 +156,9 @@ void MainWindow::handleReset() {
 
 void MainWindow::updateStatsDisplay() {
     const auto& stats = m_sim->get_stats();
-    QString text = QString("Всего прогонов: %1\n").arg(stats.total_runs);
-    text += QString("Застряло: %1\n").arg(stats.trapped_count);
-    text += "Длины путей (L):\n";
+    QString text = QString("All runs: %1\n").arg(stats.total_runs);
+    text += QString("Trapped: %1\n").arg(stats.trapped_count);
+    text += "Path lengths (L):\n";
     for(auto const& [len, count] : stats.length_dist) {
         double prob = (double)count / stats.total_runs;
         text += QString(" L=%1: %2%\n").arg(len).arg(prob * 100, 0, 'f', 1);

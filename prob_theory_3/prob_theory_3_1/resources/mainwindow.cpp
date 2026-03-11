@@ -20,11 +20,12 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     m_workerThread->start();
 }
 
-MainWindow::~MainWindow() {
+MainWindow::~MainWindow() 
+{
     m_workerThread->quit();
     m_workerThread->wait();
     delete m_worker;
-
+}
 void MainWindow::setup_ui() {
     auto* centralWidget = new QWidget(this);
     centralWidget->setObjectName("centralWidget");

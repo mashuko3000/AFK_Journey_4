@@ -151,12 +151,10 @@ void input_panel::setup_connections() {
     connect(m_dSpin, QOverload<int>::of(&QSpinBox::valueChanged), m_dSlider, &QSlider::setValue);
     connect(m_dSlider, &QSlider::valueChanged, m_dSpin, &QSpinBox::setValue);
 
-    // Логика алфавита
     connect(m_alphabetEdit, &QLineEdit::textChanged, this, &input_panel::on_alphabet_changed);
     connect(m_distTypeCombo, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &input_panel::on_dist_type_changed);
     connect(m_randomizeWeightsBtn, &QPushButton::clicked, this, &input_panel::generate_random_weights);
 
-    // Кнопки действий
     connect(m_batchStepBtn, &QPushButton::clicked, [this]() {
         emit batch_step_requested(get_config(), m_batchSizeSpin->value());
     });

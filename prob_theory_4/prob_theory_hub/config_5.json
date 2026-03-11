@@ -1,0 +1,11 @@
+{
+  "M": 4.0,
+  "h": 1.0,
+  "tau": 1.0,
+  "n": 10,
+  "N": 1000,
+  "distribution": {
+    "type": "uniform",
+    "params": {}
+  }
+}
