@@ -14,6 +14,8 @@
 #include"../mode/PCBC_mode.hpp"
 #include "../padding/zeros_padding.hpp"
 #include "../padding/ansi_padding.hpp"
+#include "../padding/pcks7_padding.hpp"
+#include "../padding/iso10126_padding.hpp"
 
 class CipherContext
 {

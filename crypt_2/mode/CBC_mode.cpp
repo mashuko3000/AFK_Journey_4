@@ -96,26 +96,19 @@ void CBC_mode::decrypt(
         {
             bytes_t current_block(block_size);
             for(size_t j = start; j < end; ++j) {
-                // 1. Берем текущий зашифрованный блок
                 std::copy(cipher.begin() + j * block_size,
                           cipher.begin() + (j + 1) * block_size,
                           current_block.begin());
 
-                // 2. Прогоняем через алгоритм (DES)
                 bytes_t decrypted = algo->decrypt_block(current_block);
 
-                // 3. XOR-им с ПРЕДЫДУЩИМ ЗАШИФРОВАННЫМ блоком
                 if(j == 0) {
-                    xor_blocks(decrypted, iv); // Для первого блока это IV
+                    xor_blocks(decrypted, iv);
                 } else {
-                    // Для остальных — это кусок изначального cipher, который был ПЕРЕД текущим
                     for (size_t b = 0; b < block_size; ++b) {
                         decrypted[b] ^= cipher[(j - 1) * block_size + b];
                     }
                 }
-
-                // 4. Копируем результат в общую кучу
-                // ОШИБКА БЫЛА ТУТ: нужно копировать в позицию j, а не i!
                 std::copy(decrypted.begin(), decrypted.end(), result.begin() + j * block_size);
             }
         }));

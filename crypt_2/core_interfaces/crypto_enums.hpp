@@ -6,7 +6,7 @@
 #include <cstdint>
 
 enum class CipherMode {ECB, CBC, PCBC};
-enum class PaddingType {Zeros, AnsiX923};
+enum class PaddingType {Zeros, AnsiX923, PCKS7, ISO10126};
 struct AdditionalParams
 {
     std::vector<uint8_t> data{};

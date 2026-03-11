@@ -17,11 +17,14 @@ CipherContext::CipherContext(
         case CipherMode::ECB:  _mode = new ECBMode(); break;
         case CipherMode::CBC:  _mode = new CBC_mode(); break;
         case CipherMode::PCBC: _mode = new PCBCMode(); break;
+
     }
     switch (padding)
     {
-        case PaddingType::Zeros:     _padding = new ZerosPadding(); break;
-        case PaddingType::AnsiX923:  _padding = new AnsiX923(); break;
+        case PaddingType::Zeros: _padding = new ZerosPadding(); break;
+        case PaddingType::AnsiX923: _padding = new AnsiX923(); break;
+        case PaddingType::PCKS7: _padding = new PCKS7(); break;
+        case PaddingType::ISO10126: _padding = new ISO10126(); break;
     }
 }
 

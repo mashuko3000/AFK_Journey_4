@@ -1,7 +1,9 @@
 #include "../inc/tripple_des.hpp"
 
-void triple_des::setup_keys(const bytes_t & key){
-    if (key.size() != 16 && key.size() != 24) {
+void triple_des::setup_keys(const bytes_t & key)
+{
+    if (key.size() != 16 && key.size() != 24)
+    {
         throw std::invalid_argument("3DES key must be 16 or 24 bytes (2 or 3 DES keys)");
     }
 
@@ -32,7 +34,8 @@ void triple_des::setup_keys(const bytes_t & key){
 }
 bytes_t triple_des::encrypt_block(const bytes_t & block)
 {
-    if (block.size() != 8) {
+    if (block.size() != 8)
+    {
         throw std::invalid_argument("Block must be 8 bytes");
     }
 
@@ -53,7 +56,8 @@ bytes_t triple_des::encrypt_block(const bytes_t & block)
 }
 bytes_t triple_des::decrypt_block(const bytes_t & block)
 {
-    if (block.size() != 8) {
+    if (block.size() != 8)
+    {
         throw std::invalid_argument("Block must be 8 bytes");
     }
 
