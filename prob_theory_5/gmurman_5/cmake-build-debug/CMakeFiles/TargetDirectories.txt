@@ -1,0 +1,3 @@
+/home/mashuko3000/studying/AFK_Journey_4/prob_theory_5/gmurman_5/cmake-build-debug/CMakeFiles/gmurman_5.dir
+/home/mashuko3000/studying/AFK_Journey_4/prob_theory_5/gmurman_5/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/mashuko3000/studying/AFK_Journey_4/prob_theory_5/gmurman_5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
