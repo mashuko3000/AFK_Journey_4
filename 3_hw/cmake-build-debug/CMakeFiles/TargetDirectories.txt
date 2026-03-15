@@ -1,0 +1,3 @@
+/home/mashuko3000/studying/AFK_Journey_4/3_hw/cmake-build-debug/CMakeFiles/3_hw.dir
+/home/mashuko3000/studying/AFK_Journey_4/3_hw/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/mashuko3000/studying/AFK_Journey_4/3_hw/cmake-build-debug/CMakeFiles/rebuild_cache.dir
