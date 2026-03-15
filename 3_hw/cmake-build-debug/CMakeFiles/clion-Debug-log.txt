@@ -1,1 +1,0 @@
-CMakeLists.txt not found in \\wsl.localhost\Ubuntu\home\mashuko3000\studying\AFK_Journey_4\3_hw Select CMakeLists.txt
