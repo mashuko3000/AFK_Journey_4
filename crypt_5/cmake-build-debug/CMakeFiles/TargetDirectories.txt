@@ -1,0 +1,7 @@
+/home/mashuko3000/studying/AFK_Journey_4/crypt_5/cmake-build-debug/CMakeFiles/crypt_5.dir
+/home/mashuko3000/studying/AFK_Journey_4/crypt_5/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/mashuko3000/studying/AFK_Journey_4/crypt_5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/mashuko3000/studying/AFK_Journey_4/crypt_5/cmake-build-debug/_deps/bigmath-build/CMakeFiles/bigmath.dir
+/home/mashuko3000/studying/AFK_Journey_4/crypt_5/cmake-build-debug/_deps/bigmath-build/CMakeFiles/bigmath++.dir
+/home/mashuko3000/studying/AFK_Journey_4/crypt_5/cmake-build-debug/_deps/bigmath-build/CMakeFiles/edit_cache.dir
+/home/mashuko3000/studying/AFK_Journey_4/crypt_5/cmake-build-debug/_deps/bigmath-build/CMakeFiles/rebuild_cache.dir

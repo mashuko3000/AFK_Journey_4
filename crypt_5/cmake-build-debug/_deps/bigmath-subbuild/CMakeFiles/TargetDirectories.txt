@@ -1,0 +1,3 @@
+/home/mashuko3000/studying/AFK_Journey_4/crypt_5/cmake-build-debug/_deps/bigmath-subbuild/CMakeFiles/bigmath-populate.dir
+/home/mashuko3000/studying/AFK_Journey_4/crypt_5/cmake-build-debug/_deps/bigmath-subbuild/CMakeFiles/edit_cache.dir
+/home/mashuko3000/studying/AFK_Journey_4/crypt_5/cmake-build-debug/_deps/bigmath-subbuild/CMakeFiles/rebuild_cache.dir
