@@ -10,9 +10,9 @@
 class FermatPrimalityTest : public BasePrimalityTest
 {
 protected:
-    bool performIteration(const bigint& n) override
+    double getConfidenceBase() const override {return 2.0;}
+    bool performIteration(const bigint& n, const bigint& a) override
     {
-        bigint a = getRandomA(n);
         bigint g = NumberTheoryService::gcd(a, n);
         bigint res = NumberTheoryService::modPow(a, n - 1, n);
 

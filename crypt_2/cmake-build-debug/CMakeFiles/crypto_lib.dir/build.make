@@ -83,24 +83,10 @@ CMakeFiles/crypto_lib.dir/context/cipher_context.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crypto_lib.dir/context/cipher_context.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mashuko3000/studying/AFK_Journey_4/crypt_2/context/cipher_context.cpp -o CMakeFiles/crypto_lib.dir/context/cipher_context.cpp.s
 
-CMakeFiles/crypto_lib.dir/context/symmetric_context.cpp.o: CMakeFiles/crypto_lib.dir/flags.make
-CMakeFiles/crypto_lib.dir/context/symmetric_context.cpp.o: /home/mashuko3000/studying/AFK_Journey_4/crypt_2/context/symmetric_context.cpp
-CMakeFiles/crypto_lib.dir/context/symmetric_context.cpp.o: CMakeFiles/crypto_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/crypto_lib.dir/context/symmetric_context.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_lib.dir/context/symmetric_context.cpp.o -MF CMakeFiles/crypto_lib.dir/context/symmetric_context.cpp.o.d -o CMakeFiles/crypto_lib.dir/context/symmetric_context.cpp.o -c /home/mashuko3000/studying/AFK_Journey_4/crypt_2/context/symmetric_context.cpp
-
-CMakeFiles/crypto_lib.dir/context/symmetric_context.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/crypto_lib.dir/context/symmetric_context.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mashuko3000/studying/AFK_Journey_4/crypt_2/context/symmetric_context.cpp > CMakeFiles/crypto_lib.dir/context/symmetric_context.cpp.i
-
-CMakeFiles/crypto_lib.dir/context/symmetric_context.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crypto_lib.dir/context/symmetric_context.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mashuko3000/studying/AFK_Journey_4/crypt_2/context/symmetric_context.cpp -o CMakeFiles/crypto_lib.dir/context/symmetric_context.cpp.s
-
 CMakeFiles/crypto_lib.dir/crypt_1/src/p_box.cpp.o: CMakeFiles/crypto_lib.dir/flags.make
 CMakeFiles/crypto_lib.dir/crypt_1/src/p_box.cpp.o: /home/mashuko3000/studying/AFK_Journey_4/crypt_2/crypt_1/src/p_box.cpp
 CMakeFiles/crypto_lib.dir/crypt_1/src/p_box.cpp.o: CMakeFiles/crypto_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/crypto_lib.dir/crypt_1/src/p_box.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/crypto_lib.dir/crypt_1/src/p_box.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_lib.dir/crypt_1/src/p_box.cpp.o -MF CMakeFiles/crypto_lib.dir/crypt_1/src/p_box.cpp.o.d -o CMakeFiles/crypto_lib.dir/crypt_1/src/p_box.cpp.o -c /home/mashuko3000/studying/AFK_Journey_4/crypt_2/crypt_1/src/p_box.cpp
 
 CMakeFiles/crypto_lib.dir/crypt_1/src/p_box.cpp.i: cmake_force
@@ -114,7 +100,7 @@ CMakeFiles/crypto_lib.dir/crypt_1/src/p_box.cpp.s: cmake_force
 CMakeFiles/crypto_lib.dir/crypt_1/src/s_box.cpp.o: CMakeFiles/crypto_lib.dir/flags.make
 CMakeFiles/crypto_lib.dir/crypt_1/src/s_box.cpp.o: /home/mashuko3000/studying/AFK_Journey_4/crypt_2/crypt_1/src/s_box.cpp
 CMakeFiles/crypto_lib.dir/crypt_1/src/s_box.cpp.o: CMakeFiles/crypto_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/crypto_lib.dir/crypt_1/src/s_box.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/crypto_lib.dir/crypt_1/src/s_box.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_lib.dir/crypt_1/src/s_box.cpp.o -MF CMakeFiles/crypto_lib.dir/crypt_1/src/s_box.cpp.o.d -o CMakeFiles/crypto_lib.dir/crypt_1/src/s_box.cpp.o -c /home/mashuko3000/studying/AFK_Journey_4/crypt_2/crypt_1/src/s_box.cpp
 
 CMakeFiles/crypto_lib.dir/crypt_1/src/s_box.cpp.i: cmake_force
@@ -128,7 +114,7 @@ CMakeFiles/crypto_lib.dir/crypt_1/src/s_box.cpp.s: cmake_force
 CMakeFiles/crypto_lib.dir/helpers/NumberTheoryService.cpp.o: CMakeFiles/crypto_lib.dir/flags.make
 CMakeFiles/crypto_lib.dir/helpers/NumberTheoryService.cpp.o: /home/mashuko3000/studying/AFK_Journey_4/crypt_2/helpers/NumberTheoryService.cpp
 CMakeFiles/crypto_lib.dir/helpers/NumberTheoryService.cpp.o: CMakeFiles/crypto_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/crypto_lib.dir/helpers/NumberTheoryService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/crypto_lib.dir/helpers/NumberTheoryService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_lib.dir/helpers/NumberTheoryService.cpp.o -MF CMakeFiles/crypto_lib.dir/helpers/NumberTheoryService.cpp.o.d -o CMakeFiles/crypto_lib.dir/helpers/NumberTheoryService.cpp.o -c /home/mashuko3000/studying/AFK_Journey_4/crypt_2/helpers/NumberTheoryService.cpp
 
 CMakeFiles/crypto_lib.dir/helpers/NumberTheoryService.cpp.i: cmake_force
@@ -142,7 +128,7 @@ CMakeFiles/crypto_lib.dir/helpers/NumberTheoryService.cpp.s: cmake_force
 CMakeFiles/crypto_lib.dir/mode/CBC_mode.cpp.o: CMakeFiles/crypto_lib.dir/flags.make
 CMakeFiles/crypto_lib.dir/mode/CBC_mode.cpp.o: /home/mashuko3000/studying/AFK_Journey_4/crypt_2/mode/CBC_mode.cpp
 CMakeFiles/crypto_lib.dir/mode/CBC_mode.cpp.o: CMakeFiles/crypto_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/crypto_lib.dir/mode/CBC_mode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/crypto_lib.dir/mode/CBC_mode.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_lib.dir/mode/CBC_mode.cpp.o -MF CMakeFiles/crypto_lib.dir/mode/CBC_mode.cpp.o.d -o CMakeFiles/crypto_lib.dir/mode/CBC_mode.cpp.o -c /home/mashuko3000/studying/AFK_Journey_4/crypt_2/mode/CBC_mode.cpp
 
 CMakeFiles/crypto_lib.dir/mode/CBC_mode.cpp.i: cmake_force
@@ -156,7 +142,7 @@ CMakeFiles/crypto_lib.dir/mode/CBC_mode.cpp.s: cmake_force
 CMakeFiles/crypto_lib.dir/mode/CFB_mode.cpp.o: CMakeFiles/crypto_lib.dir/flags.make
 CMakeFiles/crypto_lib.dir/mode/CFB_mode.cpp.o: /home/mashuko3000/studying/AFK_Journey_4/crypt_2/mode/CFB_mode.cpp
 CMakeFiles/crypto_lib.dir/mode/CFB_mode.cpp.o: CMakeFiles/crypto_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/crypto_lib.dir/mode/CFB_mode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/crypto_lib.dir/mode/CFB_mode.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_lib.dir/mode/CFB_mode.cpp.o -MF CMakeFiles/crypto_lib.dir/mode/CFB_mode.cpp.o.d -o CMakeFiles/crypto_lib.dir/mode/CFB_mode.cpp.o -c /home/mashuko3000/studying/AFK_Journey_4/crypt_2/mode/CFB_mode.cpp
 
 CMakeFiles/crypto_lib.dir/mode/CFB_mode.cpp.i: cmake_force
@@ -170,7 +156,7 @@ CMakeFiles/crypto_lib.dir/mode/CFB_mode.cpp.s: cmake_force
 CMakeFiles/crypto_lib.dir/mode/CTR_mode.cpp.o: CMakeFiles/crypto_lib.dir/flags.make
 CMakeFiles/crypto_lib.dir/mode/CTR_mode.cpp.o: /home/mashuko3000/studying/AFK_Journey_4/crypt_2/mode/CTR_mode.cpp
 CMakeFiles/crypto_lib.dir/mode/CTR_mode.cpp.o: CMakeFiles/crypto_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/crypto_lib.dir/mode/CTR_mode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/crypto_lib.dir/mode/CTR_mode.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_lib.dir/mode/CTR_mode.cpp.o -MF CMakeFiles/crypto_lib.dir/mode/CTR_mode.cpp.o.d -o CMakeFiles/crypto_lib.dir/mode/CTR_mode.cpp.o -c /home/mashuko3000/studying/AFK_Journey_4/crypt_2/mode/CTR_mode.cpp
 
 CMakeFiles/crypto_lib.dir/mode/CTR_mode.cpp.i: cmake_force
@@ -184,7 +170,7 @@ CMakeFiles/crypto_lib.dir/mode/CTR_mode.cpp.s: cmake_force
 CMakeFiles/crypto_lib.dir/mode/ECB_mode.cpp.o: CMakeFiles/crypto_lib.dir/flags.make
 CMakeFiles/crypto_lib.dir/mode/ECB_mode.cpp.o: /home/mashuko3000/studying/AFK_Journey_4/crypt_2/mode/ECB_mode.cpp
 CMakeFiles/crypto_lib.dir/mode/ECB_mode.cpp.o: CMakeFiles/crypto_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/crypto_lib.dir/mode/ECB_mode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/crypto_lib.dir/mode/ECB_mode.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_lib.dir/mode/ECB_mode.cpp.o -MF CMakeFiles/crypto_lib.dir/mode/ECB_mode.cpp.o.d -o CMakeFiles/crypto_lib.dir/mode/ECB_mode.cpp.o -c /home/mashuko3000/studying/AFK_Journey_4/crypt_2/mode/ECB_mode.cpp
 
 CMakeFiles/crypto_lib.dir/mode/ECB_mode.cpp.i: cmake_force
@@ -198,7 +184,7 @@ CMakeFiles/crypto_lib.dir/mode/ECB_mode.cpp.s: cmake_force
 CMakeFiles/crypto_lib.dir/mode/OFB_mode.cpp.o: CMakeFiles/crypto_lib.dir/flags.make
 CMakeFiles/crypto_lib.dir/mode/OFB_mode.cpp.o: /home/mashuko3000/studying/AFK_Journey_4/crypt_2/mode/OFB_mode.cpp
 CMakeFiles/crypto_lib.dir/mode/OFB_mode.cpp.o: CMakeFiles/crypto_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/crypto_lib.dir/mode/OFB_mode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/crypto_lib.dir/mode/OFB_mode.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_lib.dir/mode/OFB_mode.cpp.o -MF CMakeFiles/crypto_lib.dir/mode/OFB_mode.cpp.o.d -o CMakeFiles/crypto_lib.dir/mode/OFB_mode.cpp.o -c /home/mashuko3000/studying/AFK_Journey_4/crypt_2/mode/OFB_mode.cpp
 
 CMakeFiles/crypto_lib.dir/mode/OFB_mode.cpp.i: cmake_force
@@ -212,7 +198,7 @@ CMakeFiles/crypto_lib.dir/mode/OFB_mode.cpp.s: cmake_force
 CMakeFiles/crypto_lib.dir/mode/PCBC_mode.cpp.o: CMakeFiles/crypto_lib.dir/flags.make
 CMakeFiles/crypto_lib.dir/mode/PCBC_mode.cpp.o: /home/mashuko3000/studying/AFK_Journey_4/crypt_2/mode/PCBC_mode.cpp
 CMakeFiles/crypto_lib.dir/mode/PCBC_mode.cpp.o: CMakeFiles/crypto_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/crypto_lib.dir/mode/PCBC_mode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/crypto_lib.dir/mode/PCBC_mode.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_lib.dir/mode/PCBC_mode.cpp.o -MF CMakeFiles/crypto_lib.dir/mode/PCBC_mode.cpp.o.d -o CMakeFiles/crypto_lib.dir/mode/PCBC_mode.cpp.o -c /home/mashuko3000/studying/AFK_Journey_4/crypt_2/mode/PCBC_mode.cpp
 
 CMakeFiles/crypto_lib.dir/mode/PCBC_mode.cpp.i: cmake_force
@@ -226,7 +212,7 @@ CMakeFiles/crypto_lib.dir/mode/PCBC_mode.cpp.s: cmake_force
 CMakeFiles/crypto_lib.dir/mode/RandomDelta.cpp.o: CMakeFiles/crypto_lib.dir/flags.make
 CMakeFiles/crypto_lib.dir/mode/RandomDelta.cpp.o: /home/mashuko3000/studying/AFK_Journey_4/crypt_2/mode/RandomDelta.cpp
 CMakeFiles/crypto_lib.dir/mode/RandomDelta.cpp.o: CMakeFiles/crypto_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/crypto_lib.dir/mode/RandomDelta.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/crypto_lib.dir/mode/RandomDelta.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_lib.dir/mode/RandomDelta.cpp.o -MF CMakeFiles/crypto_lib.dir/mode/RandomDelta.cpp.o.d -o CMakeFiles/crypto_lib.dir/mode/RandomDelta.cpp.o -c /home/mashuko3000/studying/AFK_Journey_4/crypt_2/mode/RandomDelta.cpp
 
 CMakeFiles/crypto_lib.dir/mode/RandomDelta.cpp.i: cmake_force
@@ -240,7 +226,7 @@ CMakeFiles/crypto_lib.dir/mode/RandomDelta.cpp.s: cmake_force
 CMakeFiles/crypto_lib.dir/padding/ansi_padding.cpp.o: CMakeFiles/crypto_lib.dir/flags.make
 CMakeFiles/crypto_lib.dir/padding/ansi_padding.cpp.o: /home/mashuko3000/studying/AFK_Journey_4/crypt_2/padding/ansi_padding.cpp
 CMakeFiles/crypto_lib.dir/padding/ansi_padding.cpp.o: CMakeFiles/crypto_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/crypto_lib.dir/padding/ansi_padding.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/crypto_lib.dir/padding/ansi_padding.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_lib.dir/padding/ansi_padding.cpp.o -MF CMakeFiles/crypto_lib.dir/padding/ansi_padding.cpp.o.d -o CMakeFiles/crypto_lib.dir/padding/ansi_padding.cpp.o -c /home/mashuko3000/studying/AFK_Journey_4/crypt_2/padding/ansi_padding.cpp
 
 CMakeFiles/crypto_lib.dir/padding/ansi_padding.cpp.i: cmake_force
@@ -254,7 +240,7 @@ CMakeFiles/crypto_lib.dir/padding/ansi_padding.cpp.s: cmake_force
 CMakeFiles/crypto_lib.dir/padding/iso10126_padding.cpp.o: CMakeFiles/crypto_lib.dir/flags.make
 CMakeFiles/crypto_lib.dir/padding/iso10126_padding.cpp.o: /home/mashuko3000/studying/AFK_Journey_4/crypt_2/padding/iso10126_padding.cpp
 CMakeFiles/crypto_lib.dir/padding/iso10126_padding.cpp.o: CMakeFiles/crypto_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/crypto_lib.dir/padding/iso10126_padding.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/crypto_lib.dir/padding/iso10126_padding.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_lib.dir/padding/iso10126_padding.cpp.o -MF CMakeFiles/crypto_lib.dir/padding/iso10126_padding.cpp.o.d -o CMakeFiles/crypto_lib.dir/padding/iso10126_padding.cpp.o -c /home/mashuko3000/studying/AFK_Journey_4/crypt_2/padding/iso10126_padding.cpp
 
 CMakeFiles/crypto_lib.dir/padding/iso10126_padding.cpp.i: cmake_force
@@ -268,7 +254,7 @@ CMakeFiles/crypto_lib.dir/padding/iso10126_padding.cpp.s: cmake_force
 CMakeFiles/crypto_lib.dir/padding/pcks7_padding.cpp.o: CMakeFiles/crypto_lib.dir/flags.make
 CMakeFiles/crypto_lib.dir/padding/pcks7_padding.cpp.o: /home/mashuko3000/studying/AFK_Journey_4/crypt_2/padding/pcks7_padding.cpp
 CMakeFiles/crypto_lib.dir/padding/pcks7_padding.cpp.o: CMakeFiles/crypto_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/crypto_lib.dir/padding/pcks7_padding.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/crypto_lib.dir/padding/pcks7_padding.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_lib.dir/padding/pcks7_padding.cpp.o -MF CMakeFiles/crypto_lib.dir/padding/pcks7_padding.cpp.o.d -o CMakeFiles/crypto_lib.dir/padding/pcks7_padding.cpp.o -c /home/mashuko3000/studying/AFK_Journey_4/crypt_2/padding/pcks7_padding.cpp
 
 CMakeFiles/crypto_lib.dir/padding/pcks7_padding.cpp.i: cmake_force
@@ -282,7 +268,7 @@ CMakeFiles/crypto_lib.dir/padding/pcks7_padding.cpp.s: cmake_force
 CMakeFiles/crypto_lib.dir/padding/zeros_padding.cpp.o: CMakeFiles/crypto_lib.dir/flags.make
 CMakeFiles/crypto_lib.dir/padding/zeros_padding.cpp.o: /home/mashuko3000/studying/AFK_Journey_4/crypt_2/padding/zeros_padding.cpp
 CMakeFiles/crypto_lib.dir/padding/zeros_padding.cpp.o: CMakeFiles/crypto_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/crypto_lib.dir/padding/zeros_padding.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/crypto_lib.dir/padding/zeros_padding.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_lib.dir/padding/zeros_padding.cpp.o -MF CMakeFiles/crypto_lib.dir/padding/zeros_padding.cpp.o.d -o CMakeFiles/crypto_lib.dir/padding/zeros_padding.cpp.o -c /home/mashuko3000/studying/AFK_Journey_4/crypt_2/padding/zeros_padding.cpp
 
 CMakeFiles/crypto_lib.dir/padding/zeros_padding.cpp.i: cmake_force
@@ -296,7 +282,7 @@ CMakeFiles/crypto_lib.dir/padding/zeros_padding.cpp.s: cmake_force
 CMakeFiles/crypto_lib.dir/src/des.cpp.o: CMakeFiles/crypto_lib.dir/flags.make
 CMakeFiles/crypto_lib.dir/src/des.cpp.o: /home/mashuko3000/studying/AFK_Journey_4/crypt_2/src/des.cpp
 CMakeFiles/crypto_lib.dir/src/des.cpp.o: CMakeFiles/crypto_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/crypto_lib.dir/src/des.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/crypto_lib.dir/src/des.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_lib.dir/src/des.cpp.o -MF CMakeFiles/crypto_lib.dir/src/des.cpp.o.d -o CMakeFiles/crypto_lib.dir/src/des.cpp.o -c /home/mashuko3000/studying/AFK_Journey_4/crypt_2/src/des.cpp
 
 CMakeFiles/crypto_lib.dir/src/des.cpp.i: cmake_force
@@ -310,7 +296,7 @@ CMakeFiles/crypto_lib.dir/src/des.cpp.s: cmake_force
 CMakeFiles/crypto_lib.dir/src/feistel.cpp.o: CMakeFiles/crypto_lib.dir/flags.make
 CMakeFiles/crypto_lib.dir/src/feistel.cpp.o: /home/mashuko3000/studying/AFK_Journey_4/crypt_2/src/feistel.cpp
 CMakeFiles/crypto_lib.dir/src/feistel.cpp.o: CMakeFiles/crypto_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/crypto_lib.dir/src/feistel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/crypto_lib.dir/src/feistel.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_lib.dir/src/feistel.cpp.o -MF CMakeFiles/crypto_lib.dir/src/feistel.cpp.o.d -o CMakeFiles/crypto_lib.dir/src/feistel.cpp.o -c /home/mashuko3000/studying/AFK_Journey_4/crypt_2/src/feistel.cpp
 
 CMakeFiles/crypto_lib.dir/src/feistel.cpp.i: cmake_force
@@ -324,7 +310,7 @@ CMakeFiles/crypto_lib.dir/src/feistel.cpp.s: cmake_force
 CMakeFiles/crypto_lib.dir/src/triple_des.cpp.o: CMakeFiles/crypto_lib.dir/flags.make
 CMakeFiles/crypto_lib.dir/src/triple_des.cpp.o: /home/mashuko3000/studying/AFK_Journey_4/crypt_2/src/triple_des.cpp
 CMakeFiles/crypto_lib.dir/src/triple_des.cpp.o: CMakeFiles/crypto_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/crypto_lib.dir/src/triple_des.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/crypto_lib.dir/src/triple_des.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_lib.dir/src/triple_des.cpp.o -MF CMakeFiles/crypto_lib.dir/src/triple_des.cpp.o.d -o CMakeFiles/crypto_lib.dir/src/triple_des.cpp.o -c /home/mashuko3000/studying/AFK_Journey_4/crypt_2/src/triple_des.cpp
 
 CMakeFiles/crypto_lib.dir/src/triple_des.cpp.i: cmake_force
@@ -338,7 +324,7 @@ CMakeFiles/crypto_lib.dir/src/triple_des.cpp.s: cmake_force
 CMakeFiles/crypto_lib.dir/src/utils.cpp.o: CMakeFiles/crypto_lib.dir/flags.make
 CMakeFiles/crypto_lib.dir/src/utils.cpp.o: /home/mashuko3000/studying/AFK_Journey_4/crypt_2/src/utils.cpp
 CMakeFiles/crypto_lib.dir/src/utils.cpp.o: CMakeFiles/crypto_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/crypto_lib.dir/src/utils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/crypto_lib.dir/src/utils.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crypto_lib.dir/src/utils.cpp.o -MF CMakeFiles/crypto_lib.dir/src/utils.cpp.o.d -o CMakeFiles/crypto_lib.dir/src/utils.cpp.o -c /home/mashuko3000/studying/AFK_Journey_4/crypt_2/src/utils.cpp
 
 CMakeFiles/crypto_lib.dir/src/utils.cpp.i: cmake_force
@@ -352,7 +338,6 @@ CMakeFiles/crypto_lib.dir/src/utils.cpp.s: cmake_force
 # Object files for target crypto_lib
 crypto_lib_OBJECTS = \
 "CMakeFiles/crypto_lib.dir/context/cipher_context.cpp.o" \
-"CMakeFiles/crypto_lib.dir/context/symmetric_context.cpp.o" \
 "CMakeFiles/crypto_lib.dir/crypt_1/src/p_box.cpp.o" \
 "CMakeFiles/crypto_lib.dir/crypt_1/src/s_box.cpp.o" \
 "CMakeFiles/crypto_lib.dir/helpers/NumberTheoryService.cpp.o" \
@@ -376,7 +361,6 @@ crypto_lib_OBJECTS = \
 crypto_lib_EXTERNAL_OBJECTS =
 
 libcrypto_lib.a: CMakeFiles/crypto_lib.dir/context/cipher_context.cpp.o
-libcrypto_lib.a: CMakeFiles/crypto_lib.dir/context/symmetric_context.cpp.o
 libcrypto_lib.a: CMakeFiles/crypto_lib.dir/crypt_1/src/p_box.cpp.o
 libcrypto_lib.a: CMakeFiles/crypto_lib.dir/crypt_1/src/s_box.cpp.o
 libcrypto_lib.a: CMakeFiles/crypto_lib.dir/helpers/NumberTheoryService.cpp.o
@@ -397,7 +381,7 @@ libcrypto_lib.a: CMakeFiles/crypto_lib.dir/src/triple_des.cpp.o
 libcrypto_lib.a: CMakeFiles/crypto_lib.dir/src/utils.cpp.o
 libcrypto_lib.a: CMakeFiles/crypto_lib.dir/build.make
 libcrypto_lib.a: CMakeFiles/crypto_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX static library libcrypto_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX static library libcrypto_lib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/crypto_lib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/crypto_lib.dir/link.txt --verbose=$(VERBOSE)
 

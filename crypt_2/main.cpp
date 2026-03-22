@@ -1,19 +1,46 @@
 
 #include "helpers/NumberTheoryService.hpp"
-#include "primality_tests/FermatPrimalityTest.hpp"
+#include"RSA/RSA.hpp"
+#include"service/service.hpp"
+#include "RSA/RSAKeyGenerator.hpp"
+
+#include <iostream>
+#include <fstream>
+#include <filesystem>
+#include <string>
+
+namespace fs = std::filesystem;
 
 int main()
 {
-    bigint a = 114;
-    bigint b = 39;
+    auto keys = RSAKeyGenerator::generate(1024);
 
-    NumberTheoryService num;
-    FermatPrimalityTest test;
+    RSACipher rsa_pub(keys.e, keys.n);
+    RSACipher rsa_priv(keys.d, keys.n);
+    service encryptor(rsa_pub);
+    service decryptor(rsa_priv);
 
-    std::cout << test.isPrime(104728, 0.99);
+    std::string filename = "test.png";
 
-    bigint c = num.gcd(a, b);
+    try
+    {
+        std::string encrypted_tmp = filename + ".tmp";
+        std::string result_filename = "res_" + filename;
 
-    std::cout << c << std::endl;
+        std::cout << "Process: Encrypting" << std::endl;
+        encryptor.encrypt_file(filename, encrypted_tmp);
+
+        std::cout << "Process: Decrypting" << std::endl;
+        decryptor.decrypt_file(encrypted_tmp, result_filename);
+
+        std::cout << "Success! Saved as: " << result_filename << std::endl;
+
+    }
+    catch (const std::exception& ex)
+    {
+        std::cerr << "Fatal Error: " << ex.what() << std::endl;
+    }
+
+
     return 0;
 }

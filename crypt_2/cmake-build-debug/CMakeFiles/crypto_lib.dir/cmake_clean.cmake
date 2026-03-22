@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/crypto_lib.dir/context/cipher_context.cpp.o"
   "CMakeFiles/crypto_lib.dir/context/cipher_context.cpp.o.d"
-  "CMakeFiles/crypto_lib.dir/context/symmetric_context.cpp.o"
-  "CMakeFiles/crypto_lib.dir/context/symmetric_context.cpp.o.d"
   "CMakeFiles/crypto_lib.dir/crypt_1/src/p_box.cpp.o"
   "CMakeFiles/crypto_lib.dir/crypt_1/src/p_box.cpp.o.d"
   "CMakeFiles/crypto_lib.dir/crypt_1/src/s_box.cpp.o"

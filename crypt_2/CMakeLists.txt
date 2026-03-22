@@ -26,7 +26,14 @@ FetchContent_MakeAvailable(googletest bigmath)
 add_executable(crypt_2 main.cpp
         core_interfaces/i_primary_test.hpp
         primality_tests/BasePrimalityTest.hpp
-        primality_tests/FermatPrimalityTest.hpp)
+        primality_tests/FermatPrimalityTest.hpp
+        primality_tests/MillerRobinPrimalityTest.hpp
+        primality_tests/SolovayStrassenPrimalityTest.hpp
+        RSA/RSA.cpp
+        RSA/RSA.hpp
+        service/service.cpp
+        service/service.hpp
+        RSA/RSAKeyGenerator.hpp)
 target_link_libraries(crypt_2 PRIVATE crypto_lib bigmath++ Boost::system)
 
 add_executable(crypto_unit_tests tests.cpp unit_tests/unit_tests_padding_and_mode.cpp)

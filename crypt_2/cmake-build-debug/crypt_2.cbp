@@ -554,6 +554,15 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/mashuko3000/studying/AFK_Journey_4/crypt_2/RSA/RSA.cpp">
+			<Option target="crypt_2"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/AFK_Journey_4/crypt_2/RSA/RSA.hpp">
+			<Option target="crypt_2"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/AFK_Journey_4/crypt_2/RSA/RSAKeyGenerator.hpp">
+			<Option target="crypt_2"/>
+		</Unit>
 		<Unit filename="/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/_deps/bigmath-src/src/alloc.c">
 			<Option target="bigmath"/>
 		</Unit>
@@ -818,12 +827,6 @@
 		<Unit filename="/home/mashuko3000/studying/AFK_Journey_4/crypt_2/context/cipher_context.hpp">
 			<Option target="crypto_lib"/>
 		</Unit>
-		<Unit filename="/home/mashuko3000/studying/AFK_Journey_4/crypt_2/context/symmetric_context.cpp">
-			<Option target="crypto_lib"/>
-		</Unit>
-		<Unit filename="/home/mashuko3000/studying/AFK_Journey_4/crypt_2/context/symmetric_context.hpp">
-			<Option target="crypto_lib"/>
-		</Unit>
 		<Unit filename="/home/mashuko3000/studying/AFK_Journey_4/crypt_2/core_interfaces/i_primary_test.hpp">
 			<Option target="crypt_2"/>
 		</Unit>
@@ -912,6 +915,18 @@
 			<Option target="crypt_2"/>
 		</Unit>
 		<Unit filename="/home/mashuko3000/studying/AFK_Journey_4/crypt_2/primality_tests/FermatPrimalityTest.hpp">
+			<Option target="crypt_2"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/AFK_Journey_4/crypt_2/primality_tests/MillerRobinPrimalityTest.hpp">
+			<Option target="crypt_2"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/AFK_Journey_4/crypt_2/primality_tests/SolovayStrassenPrimalityTest.hpp">
+			<Option target="crypt_2"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/AFK_Journey_4/crypt_2/service/service.cpp">
+			<Option target="crypt_2"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/AFK_Journey_4/crypt_2/service/service.hpp">
 			<Option target="crypt_2"/>
 		</Unit>
 		<Unit filename="/home/mashuko3000/studying/AFK_Journey_4/crypt_2/src/des.cpp">

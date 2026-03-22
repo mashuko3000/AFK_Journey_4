@@ -7,21 +7,23 @@
 
 #include "../core_interfaces/i_primary_test.hpp"
 #include "boost/random.hpp"
+#include <boost/multiprecision/cpp_dec_float.hpp>
 
 class BasePrimalityTest : public IPrimalityTest
 {
 public:
-    bool isPrime(const bigint& n, double minProb) override
+    bool isPrime(const bigint& n, bigfloat minProb) override
     {
         if(n <= 1) return false;//
         if(n <= 3) return true;
         if (n % 2 == 0) return false;
 
-        int iterations = static_cast<int>(std::ceil(std::log2(1.0 / (1.0 - minProb))));//
+        int iterations = calculateIterations(minProb);
 
         for (int i = 0; i < iterations; ++i)
         {
-            if (!performIteration(n)) // a
+            bigint a = getRandomA(n);
+            if (!performIteration(n, a))
             {
                 return false;
             }
@@ -30,7 +32,20 @@ public:
     }
 
 protected:
-    virtual bool performIteration(const bigint& n) = 0;
+    virtual bool performIteration(const bigint& n, const bigint& a) = 0;
+    virtual double getConfidenceBase() const = 0;
+
+    int calculateIterations(bigfloat minProb) const
+    {
+        bigfloat epsilon = bigfloat(1.0) - minProb;
+        if (epsilon <= 0) return 100;
+
+        bigfloat invEps = bigfloat(1.0) / epsilon;
+        bigfloat base = bigfloat(getConfidenceBase());
+
+        bigfloat k = boost::multiprecision::log(invEps) / boost::multiprecision::log(base);
+        return static_cast<int>(boost::multiprecision::ceil(k));
+    }
 
     bigint getRandomA(const bigint& n)
     {
