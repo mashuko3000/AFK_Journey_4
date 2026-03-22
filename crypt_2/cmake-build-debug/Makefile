@@ -326,6 +326,54 @@ context/symmetric_context.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_lib.dir/build.make CMakeFiles/crypto_lib.dir/context/symmetric_context.cpp.s
 .PHONY : context/symmetric_context.cpp.s
 
+crypt_1/src/p_box.o: crypt_1/src/p_box.cpp.o
+.PHONY : crypt_1/src/p_box.o
+
+# target to build an object file
+crypt_1/src/p_box.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_lib.dir/build.make CMakeFiles/crypto_lib.dir/crypt_1/src/p_box.cpp.o
+.PHONY : crypt_1/src/p_box.cpp.o
+
+crypt_1/src/p_box.i: crypt_1/src/p_box.cpp.i
+.PHONY : crypt_1/src/p_box.i
+
+# target to preprocess a source file
+crypt_1/src/p_box.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_lib.dir/build.make CMakeFiles/crypto_lib.dir/crypt_1/src/p_box.cpp.i
+.PHONY : crypt_1/src/p_box.cpp.i
+
+crypt_1/src/p_box.s: crypt_1/src/p_box.cpp.s
+.PHONY : crypt_1/src/p_box.s
+
+# target to generate assembly for a file
+crypt_1/src/p_box.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_lib.dir/build.make CMakeFiles/crypto_lib.dir/crypt_1/src/p_box.cpp.s
+.PHONY : crypt_1/src/p_box.cpp.s
+
+crypt_1/src/s_box.o: crypt_1/src/s_box.cpp.o
+.PHONY : crypt_1/src/s_box.o
+
+# target to build an object file
+crypt_1/src/s_box.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_lib.dir/build.make CMakeFiles/crypto_lib.dir/crypt_1/src/s_box.cpp.o
+.PHONY : crypt_1/src/s_box.cpp.o
+
+crypt_1/src/s_box.i: crypt_1/src/s_box.cpp.i
+.PHONY : crypt_1/src/s_box.i
+
+# target to preprocess a source file
+crypt_1/src/s_box.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_lib.dir/build.make CMakeFiles/crypto_lib.dir/crypt_1/src/s_box.cpp.i
+.PHONY : crypt_1/src/s_box.cpp.i
+
+crypt_1/src/s_box.s: crypt_1/src/s_box.cpp.s
+.PHONY : crypt_1/src/s_box.s
+
+# target to generate assembly for a file
+crypt_1/src/s_box.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/crypto_lib.dir/build.make CMakeFiles/crypto_lib.dir/crypt_1/src/s_box.cpp.s
+.PHONY : crypt_1/src/s_box.cpp.s
+
 helpers/NumberTheoryService.o: helpers/NumberTheoryService.cpp.o
 .PHONY : helpers/NumberTheoryService.o
 
@@ -809,6 +857,12 @@ help:
 	@echo "... context/symmetric_context.o"
 	@echo "... context/symmetric_context.i"
 	@echo "... context/symmetric_context.s"
+	@echo "... crypt_1/src/p_box.o"
+	@echo "... crypt_1/src/p_box.i"
+	@echo "... crypt_1/src/p_box.s"
+	@echo "... crypt_1/src/s_box.o"
+	@echo "... crypt_1/src/s_box.i"
+	@echo "... crypt_1/src/s_box.s"
 	@echo "... helpers/NumberTheoryService.o"
 	@echo "... helpers/NumberTheoryService.i"
 	@echo "... helpers/NumberTheoryService.s"

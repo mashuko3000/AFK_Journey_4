@@ -13,8 +13,11 @@ protected:
     bool performIteration(const bigint& n) override
     {
         bigint a = getRandomA(n);
-        if (NumberTheoryService::gcd(a, n) != 1) return false;
-        return NumberTheoryService::modPow(a, n - 1, n) == 1;
+        bigint g = NumberTheoryService::gcd(a, n);
+        bigint res = NumberTheoryService::modPow(a, n - 1, n);
+
+        if (g != 1) return false;
+        return res == 1;
     }
 };
 

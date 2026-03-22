@@ -827,6 +827,12 @@
 		<Unit filename="/home/mashuko3000/studying/AFK_Journey_4/crypt_2/core_interfaces/i_primary_test.hpp">
 			<Option target="crypt_2"/>
 		</Unit>
+		<Unit filename="/home/mashuko3000/studying/AFK_Journey_4/crypt_2/crypt_1/src/p_box.cpp">
+			<Option target="crypto_lib"/>
+		</Unit>
+		<Unit filename="/home/mashuko3000/studying/AFK_Journey_4/crypt_2/crypt_1/src/s_box.cpp">
+			<Option target="crypto_lib"/>
+		</Unit>
 		<Unit filename="/home/mashuko3000/studying/AFK_Journey_4/crypt_2/helpers/NumberTheoryService.cpp">
 			<Option target="crypto_lib"/>
 		</Unit>

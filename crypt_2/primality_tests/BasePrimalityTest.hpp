@@ -13,15 +13,15 @@ class BasePrimalityTest : public IPrimalityTest
 public:
     bool isPrime(const bigint& n, double minProb) override
     {
-        if(n <= 1) return false;
+        if(n <= 1) return false;//
         if(n <= 3) return true;
         if (n % 2 == 0) return false;
 
-        int iterations = static_cast<int>(std::ceil(std::log2(1.0 / (1.0 - minProb))));
+        int iterations = static_cast<int>(std::ceil(std::log2(1.0 / (1.0 - minProb))));//
 
         for (int i = 0; i < iterations; ++i)
         {
-            if (!performIteration(n))
+            if (!performIteration(n)) // a
             {
                 return false;
             }

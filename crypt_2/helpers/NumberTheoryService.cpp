@@ -49,7 +49,7 @@ bigint NumberTheoryService::gcd(bigint a, bigint b)
     while(b!=0)
     {
         bigint t = b;
-        b = b % a;
+        b = a % b;
         a = t;
     }
     return a;

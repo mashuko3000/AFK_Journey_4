@@ -8,6 +8,6 @@ CMake Deprecation Warning:
   use the cmake-file-api(7) to view CMake-generated project build trees.
 
 
--- Configuring done (1.4s)
+-- Configuring done (1.2s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug

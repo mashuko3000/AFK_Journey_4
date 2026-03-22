@@ -8,6 +8,8 @@
 #include "padding/zeros_padding.hpp"
 #include "padding/ansi_padding.hpp"
 #include "context/cipher_context.hpp"
+#include "helpers/NumberTheoryService.hpp"
+#include "primality_tests/FermatPrimalityTest.hpp"
 
 class CryptoServiceTest : public ::testing::Test {
 protected:
@@ -174,4 +176,38 @@ TEST(PaddingTest, AnsiX923CheckLastByte) {
 
     bytes_t unpadded = pad.remove(padded, block_size);
     EXPECT_EQ(unpadded, data);
+}
+
+class PrimalityTestFixture : public ::testing::Test {
+protected:
+    FermatPrimalityTest test;
+    double high_prob = 0.99;
+};
+
+TEST_F(PrimalityTestFixture, HandlesSmallNumbers) {
+    EXPECT_FALSE(test.isPrime(0, high_prob));
+    EXPECT_FALSE(test.isPrime(1, high_prob));
+    EXPECT_TRUE(test.isPrime(2, high_prob));
+    EXPECT_TRUE(test.isPrime(3, high_prob));
+}
+
+TEST_F(PrimalityTestFixture, IdentifiesPrimes) {
+    std::vector<bigint> primes = {7, 13, 17, 19, 101, 104729};
+    for (const auto& p : primes) {
+        EXPECT_TRUE(test.isPrime(p, high_prob)) << "Failed for prime: " << p;
+    }
+}
+
+TEST_F(PrimalityTestFixture, IdentifiesComposites) {
+    std::vector<bigint> composites = {4, 9, 15, 21, 100, 104728};
+    for (const auto& c : composites) {
+        EXPECT_FALSE(test.isPrime(c, high_prob)) << "Failed for composite: " << c;
+    }
+}
+
+TEST_F(PrimalityTestFixture, CarmichaelNumbersWarning) {
+    bigint carmichael = 561;
+    bool result = test.isPrime(carmichael, high_prob);
+    std::cout << "[ INFO ] Fermat test result for Carmichael number 561: "
+              << (result ? "Probably Prime" : "Composite") << std::endl;
 }

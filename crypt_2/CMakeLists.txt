@@ -6,7 +6,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Boost REQUIRED COMPONENTS system)
 
-file(GLOB_RECURSE LIB_SOURCES "src/*.cpp" "padding/*.cpp" "mode/*.cpp" "context/*.cpp" "helpers/*.cpp")
+file(GLOB_RECURSE LIB_SOURCES
+        "src/*.cpp"
+        "padding/*.cpp"
+        "mode/*.cpp"
+        "context/*.cpp"
+        "helpers/*.cpp"
+        "crypt_1/src/*.cpp")
 add_library(crypto_lib STATIC ${LIB_SOURCES})
 target_include_directories(crypto_lib PUBLIC inc crypt_1/inc core_interfaces padding mode context helpers)
 
