@@ -16,7 +16,7 @@ public:
         bigint n, e, d;
     };
 
-    static KeyPair generate(int bitLength) {
+    static KeyPair аааgenerate(int bitLength) {
         MillerRabinPrimalityTest primalityTest;
         bigint p = generatePrime(bitLength / 2, primalityTest);
         bigint q = generatePrime(bitLength / 2, primalityTest);
