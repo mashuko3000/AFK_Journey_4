@@ -24,8 +24,6 @@ void RSACipher::setup_keys(const bytes_t & key)
     throw std::logic_error("Use constructor or specific RSA key setter for RSA");
 }
 
-
-
 size_t RSACipher::get_block_size() const
 {
     return modulesByteSize > 1 ? modulesByteSize - 1 : 1;

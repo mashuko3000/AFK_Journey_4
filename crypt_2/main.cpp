@@ -13,14 +13,16 @@ namespace fs = std::filesystem;
 
 int main()
 {
-    auto keys = RSAKeyGenerator::generate(1024);
+    MillerRabinPrimalityTest test;
+
+    auto keys = RSAKeyGenerator::generate(1024, test, 0.9999);
 
     RSACipher rsa_pub(keys.e, keys.n);
     RSACipher rsa_priv(keys.d, keys.n);
     service encryptor(rsa_pub);
     service decryptor(rsa_priv);
 
-    std::string filename = "test.png";
+    std::string filename = "test.jpg";
 
     try
     {

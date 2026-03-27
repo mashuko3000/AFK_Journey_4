@@ -16,7 +16,7 @@ public:
     {
         if(n <= 1) return false;//
         if(n <= 3) return true;
-        if (n % 2 == 0) return false;
+        if ((n & 1) == 0) return false;
 
         int iterations = calculateIterations(minProb);
 
@@ -30,6 +30,8 @@ public:
         }
         return true;
     }
+
+    virtual ~BasePrimalityTest() = default;
 
 protected:
     virtual bool performIteration(const bigint& n, const bigint& a) = 0;
