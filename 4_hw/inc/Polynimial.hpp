@@ -7,6 +7,7 @@
 
 #include"Monomial.hpp"
 #include"TrieNode.hpp"
+#include"../../5_hw/interfaces.h"
 
 #include<stdexcept>
 
@@ -78,6 +79,52 @@ public:
             std::ostream&os,
             const Polynomial<U>& poly
             );
+
+    const std::vector<std::string>& getVariables() const
+    {
+        return variables;
+    }
+
+    [[nodiscard]] Monomial<T> leadingTerm(const MonomialOrder<T>& order) const
+    {
+        const std::vector<Monomial<T>> supp = support();
+
+        if(supp.empty())
+        {
+            throw std::logic_error("Zero polynomial has no leading term.");
+        }
+
+        Monomial<T> maxMonomial = supp[0];
+        for(size_t i = 0; i < supp.size(); ++i)
+        {
+            if(order.compare(supp[i].powers, maxMonomial.powers))
+            {
+                maxMonomial = supp[i];
+            }
+        }
+        return maxMonomial;
+    }
+
+    [[nodiscard]] Monomial<T> lt(const MonomialOrder<T>& order) const
+    {
+        return { this->lm(order), this->lc(order) };
+    }
+
+    [[nodiscard]] T lc(const MonomialOrder<T>& order) const
+    {
+        return leadingTerm(order).coeff;
+    }
+
+    [[nodiscard]] std::vector<int> lm(const MonomialOrder<T>& order) const
+    {
+        return leadingTerm(order).powers;
+    }
+
+    [[nodiscard]] std::vector<int> multideg(const MonomialOrder<T>& order) const
+    {
+        return leadingTerm(order).powers;
+    }
+
 
 private:
     //clean empty threads

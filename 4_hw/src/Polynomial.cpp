@@ -3,10 +3,14 @@
 template <typename T>
 Polynomial<T>& Polynomial<T>::operator=(const Polynomial<T>& other)
 {
-    if(this!=&other)
+    if (this != &other)
     {
-        variables = other.variables;
-        root = cloneTree(other.root.get());
+
+        Polynomial<T> temp(other);
+        std::swap(this->variables, temp.variables);
+        std::swap(this->root, temp.root);
     }
+
     return *this;
 }
+

@@ -17,7 +17,7 @@ int Polynomial<T>::degreeOfHomogeneity() const
     auto supp = support();
     if(supp.empty()) return 0;
     int expected_deg = supp[0].totalDegree();
-    for(size_t i = 0; i < supp.size(); ++i)
+    for(size_t i = 1; i < supp.size(); ++i)
     {
         if(supp[i].totalDegree() != expected_deg) return -1;
     }

@@ -16,13 +16,13 @@ Polynomial<T> Polynomial<T>::operator-(
         const Polynomial<T>& other
 ) const
 {
+    Polynomial<T> negativePoly(variables);
     Polynomial result(variables);
-    auto negOther = negateTree(
+    negativePoly.root = negateTree(
             other.root.get(),
             0,
-            variables.size()
-            );
-    result = *this + other;
+            variables.size());
+    result = *this + negativePoly;
     return result;
 }
 
