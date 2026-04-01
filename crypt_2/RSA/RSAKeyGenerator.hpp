@@ -7,6 +7,7 @@
 
 #include "../primality_tests/MillerRobinPrimalityTest.hpp"
 #include"../helpers/NumberTheoryService.hpp"
+#include "../helpers/PrimeGenerator.h"
 
 class RSAKeyGenerator final
 {
@@ -16,17 +17,17 @@ public:
         bigint n, e, d;
     };
 
-    static KeyPair generate(int bitLength, const IPrimalityTest& test, double confidence = 0.9999)
+    static KeyPair generate(int bitLength, const PrimeGenerator& generator)
     {
         if (bitLength < 16) throw std::invalid_argument("Bit length is too small for RSA.");
         bigint p, q, n, phi, e, d;
         int halfBits = bitLength / 2;
 
-        p = generatePrime(halfBits, test, confidence);
+        p = generator.generate_random_prime(halfBits);
 
         do
         {
-            q = generatePrime(halfBits, test, confidence);
+            q = generator.generate_random_prime(halfBits);
         } while(p == q || abs_diff(p, q) < (bigint(1) << (halfBits - 100)));
 
         n = p * q;
@@ -49,7 +50,7 @@ public:
             e = (bigint(1) << k) + 1;
             if (e >= phi)
             {
-                return generate(bitLength, test, confidence);
+                return generate(bitLength, generator);
             }
         }
 

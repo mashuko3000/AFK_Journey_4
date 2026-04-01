@@ -3,7 +3,7 @@
 #define CRYPT_2_I_MODE_HPP
 
 #include"crypro_types.hpp"
-#include"../inc/interfaces.hpp"
+#include"interfaces.hpp"
 #include "crypto_enums.hpp"
 
 class IMode

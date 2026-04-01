@@ -11,7 +11,7 @@ class MillerRabinPrimalityTest : public BasePrimalityTest
 {
 protected:
     double getConfidenceBase() const override{return 4.0;}
-    bool performIteration(const bigint& n, const bigint& a) override
+    bool performIteration(const bigint& n, const bigint& a) const override
     {
         bigint d = n - 1;
         int s = 0;

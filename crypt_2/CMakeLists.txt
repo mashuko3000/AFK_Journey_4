@@ -7,37 +7,44 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Boost REQUIRED COMPONENTS system)
 
 file(GLOB_RECURSE LIB_SOURCES
-        "src/*.cpp"
-        "padding/*.cpp"
-        "mode/*.cpp"
-        "context/*.cpp"
-        "helpers/*.cpp"
-        "crypt_1/src/*.cpp")
-add_library(crypto_lib STATIC ${LIB_SOURCES})
-target_include_directories(crypto_lib PUBLIC inc crypt_1/inc core_interfaces padding mode context helpers)
+        "src/*.cpp" "padding/*.cpp" "mode/*.cpp" "context/*.cpp"
+        "helpers/*.cpp" "RSA/*.cpp" "service/*.cpp"  "attack/rsa_attack/*.cpp" "boxes/*.cpp"
+)
+add_library(crypto_lib STATIC ${LIB_SOURCES}
+        helpers/FractionService.cpp
+        helpers/FractionService.h)
+target_include_directories(crypto_lib PUBLIC
+        des_inc attack/rsa_attack boxes core_interfaces padding mode context helpers RSA service primality_tests
+)
 
 include(FetchContent)
-FetchContent_Declare(googletest URL https://github.com/google/googletest/archive/refs/heads/main.zip)
-FetchContent_Declare(bigmath GIT_REPOSITORY https://github.com/koftamainee/bigmath.git GIT_TAG master)
+FetchContent_Declare(
+        googletest
+        URL https://github.com/google/googletest/archive/refs/heads/main.zip
+)
+FetchContent_MakeAvailable(googletest)
 
-set(BIGMATH_BUILD_TESTS OFF CACHE BOOL "" FORCE)
-FetchContent_MakeAvailable(googletest bigmath)
+add_executable(crypt_2 main.cpp)
+target_link_libraries(crypt_2 PRIVATE crypto_lib Boost::boost Boost::system)
 
-add_executable(crypt_2 main.cpp
-        core_interfaces/i_primary_test.hpp
-        primality_tests/BasePrimalityTest.hpp
-        primality_tests/FermatPrimalityTest.hpp
-        primality_tests/MillerRobinPrimalityTest.hpp
-        primality_tests/SolovayStrassenPrimalityTest.hpp
-        RSA/RSA.cpp
-        RSA/RSA.hpp
-        service/service.cpp
-        service/service.hpp
-        RSA/RSAKeyGenerator.hpp)
-target_link_libraries(crypt_2 PRIVATE crypto_lib bigmath++ Boost::system)
-
-add_executable(crypto_unit_tests tests.cpp unit_tests/unit_tests_padding_and_mode.cpp)
-target_link_libraries(crypto_unit_tests PRIVATE crypto_lib GTest::gtest_main)
-
+enable_testing()
 include(GoogleTest)
-gtest_discover_tests(crypto_unit_tests)
+
+file(GLOB_RECURSE TEST_SOURCES "unit_tests/*.cpp")
+
+if(TEST_SOURCES)
+    add_executable(unit_tests ${TEST_SOURCES}
+            unit_tests/FermatAttackTests.cpp
+            unit_tests/WienerAttackTest.cpp
+            unit_tests/HelpersTests.cpp
+    )
+    target_link_libraries(unit_tests
+            PRIVATE
+            crypto_lib
+            Boost::boost
+            Boost::system
+            gtest_main
+            gtest
+    )
+    gtest_discover_tests(unit_tests)
+endif()

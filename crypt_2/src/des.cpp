@@ -1,4 +1,5 @@
-#include"../inc/des.hpp"
+#include"des.hpp"
+#include"p_box.hpp"
 
 bytes_t des_cipher::pre_encrypt(const bytes_t& block) const
 {

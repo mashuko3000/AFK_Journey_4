@@ -12,7 +12,7 @@ class SolovayStrassenPrimalityTest : public BasePrimalityTest
 protected:
     double getConfidenceBase() const override {return 2.0;}
 
-    bool performIteration(const bigint& n, const bigint& a) override
+    bool performIteration(const bigint& n, const bigint& a) const override
     {
         bigint a_copy = a;
         bigint n_copy = n;

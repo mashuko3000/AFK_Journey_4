@@ -5,7 +5,7 @@
 #ifndef CRYPT_2_RSA_HPP
 #define CRYPT_2_RSA_HPP
 
-#include"../inc/interfaces.hpp"
+#include"interfaces.hpp"
 #include "../primality_tests/BasePrimalityTest.hpp"
 
 class RSACipher : public i_cipher

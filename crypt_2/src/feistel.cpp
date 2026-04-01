@@ -1,4 +1,4 @@
-#include"../inc/feistel.hpp"
+#include"feistel.hpp"
 
 feistel_network::feistel_network(
         i_key_expander& expander,

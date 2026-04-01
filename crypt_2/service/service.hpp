@@ -9,7 +9,7 @@
 #include <fstream>
 #include <filesystem>
 
-#include "../inc/interfaces.hpp"
+#include "interfaces.hpp"
 #include "../core_interfaces/crypto_enums.hpp"
 
 class service final {

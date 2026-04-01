@@ -14,7 +14,7 @@ class IPrimalityTest
 {
 public:
     virtual ~IPrimalityTest() noexcept = default;
-    virtual bool isPrime(const bigint&n, bigfloat minProb) = 0;
+    virtual bool isPrime(const bigint&n, bigfloat minProb) const = 0;
 };
 
 #endif //CRYPT_2_I_PRIMARY_TEST_HPP

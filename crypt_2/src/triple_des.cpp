@@ -1,4 +1,4 @@
-#include "../inc/tripple_des.hpp"
+#include "tripple_des.hpp"
 
 void triple_des::setup_keys(const bytes_t & key)
 {

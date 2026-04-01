@@ -11,7 +11,7 @@ class FermatPrimalityTest : public BasePrimalityTest
 {
 protected:
     double getConfidenceBase() const override {return 2.0;}
-    bool performIteration(const bigint& n, const bigint& a) override
+    bool performIteration(const bigint& n, const bigint& a) const override
     {
         bigint g = NumberTheoryService::gcd(a, n);
         bigint res = NumberTheoryService::modPow(a, n - 1, n);

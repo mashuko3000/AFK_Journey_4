@@ -12,7 +12,7 @@
 class BasePrimalityTest : public IPrimalityTest
 {
 public:
-    bool isPrime(const bigint& n, bigfloat minProb) override
+    bool isPrime(const bigint& n, bigfloat minProb) const override
     {
         if(n <= 1) return false;//
         if(n <= 3) return true;
@@ -34,7 +34,7 @@ public:
     virtual ~BasePrimalityTest() = default;
 
 protected:
-    virtual bool performIteration(const bigint& n, const bigint& a) = 0;
+    virtual bool performIteration(const bigint& n, const bigint& a) const = 0;
     virtual double getConfidenceBase() const = 0;
 
     int calculateIterations(bigfloat minProb) const
@@ -49,7 +49,7 @@ protected:
         return static_cast<int>(boost::multiprecision::ceil(k));
     }
 
-    bigint getRandomA(const bigint& n)
+    bigint getRandomA(const bigint& n) const
     {
         static boost::random::mt19937 gen(std::time(nullptr));
         boost::random::uniform_int_distribution<bigint> dist(2, n - 2);
