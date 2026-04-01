@@ -1,5 +1,0 @@
-if(EXISTS "/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/crypto_unit_tests[1]_tests.cmake")
-  include("/home/mashuko3000/studying/AFK_Journey_4/crypt_2/cmake-build-debug/crypto_unit_tests[1]_tests.cmake")
-else()
-  add_test(crypto_unit_tests_NOT_BUILT crypto_unit_tests_NOT_BUILT)
-endif()

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libbigmath++.a CMakeFiles/bigmath++.dir/src/bigint/bigint.cpp.o CMakeFiles/bigmath++.dir/src/bigfloat/arithmetics.cpp.o CMakeFiles/bigmath++.dir/src/bigfloat/bigfloat.cpp.o CMakeFiles/bigmath++.dir/src/bigfloat/exponential.cpp.o CMakeFiles/bigmath++.dir/src/bigfloat/io.cpp.o CMakeFiles/bigmath++.dir/src/bigfloat/logarithmic.cpp.o CMakeFiles/bigmath++.dir/src/bigfloat/logical.cpp.o CMakeFiles/bigmath++.dir/src/bigfloat/trigonometry.cpp.o
-/usr/bin/ranlib libbigmath++.a
