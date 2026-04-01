@@ -19,7 +19,7 @@ TEST_F(WienerAttackTest, SuccessfulFactorizationKnownValues) {
 }
 
 TEST_F(WienerAttackTest, ThrowsOnInvalidInputs) {
-EXPECT_THROW(attack.execute(0, 17993), std::invalid_argument);
-EXPECT_THROW(attack.execute(90581, 0), std::invalid_argument);
-EXPECT_THROW(attack.execute(90581, 99999), std::invalid_argument);
+    EXPECT_THROW(attack.execute(0, 17993), std::invalid_argument);
+    EXPECT_THROW(attack.execute(90581, 0), std::invalid_argument);
+    EXPECT_THROW(attack.execute(90581, 99999), std::invalid_argument);
 }
