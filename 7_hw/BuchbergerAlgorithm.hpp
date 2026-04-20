@@ -9,6 +9,9 @@
 #include "SPolynomial.hpp"
 #include "PolyDivision.h"
 #include "interfaces.h"
+#include"MinimalBasisTransformer.hpp"
+
+#include<deque>
 
 template<typename T>
 class BuchbergerAlgorithm final
@@ -16,43 +19,44 @@ class BuchbergerAlgorithm final
 public:
     BuchbergerAlgorithm() = delete;
 
-    [[nodiscard]] static std::vector<Polynomial<T>> compute(const std::vector<Polynomial<T>>& initialBasis,
-                                                            const MonomialOrder<T> order)
+    [[nodiscard]] static std::vector<Polynomial<T>> computeMinimal(const std::vector<Polynomial<T>>& initialBasis,
+                                                            const MonomialOrder<T>& order)
     {
         validateBasis(initialBasis);
 
         std::vector<Polynomial<T>> groebnerBasis = initialBasis;
-        bool basisExpanded = true;
+        std::deque<std::pair<size_t, size_t>> paris;
 
-        while(basisExpanded)
+        for (size_t i = 0; i < groebnerBasis.size(); ++i)
         {
-            basisExpanded = false;
-            const size_t currentSize = groebnerBasis.size();
-
-            for(size_t i = 0; i < currentSize; ++i)
+            for(size_t j = i + 1; j < groebnerBasis.size(); ++j)
             {
-                for(size_t j = i + 1; j < currentSize; ++j)
-                {
-                    const auto sPoly = SPolynomial<T>::compute(groebnerBasis[i],
-                                                               groebnerBasis[j],
-                                                               order);
-
-                    if(sPoly.support().empty())
-                    {
-                        continue;
-                    }
-
-                    const auto divisionRes = Division<T>::divide(sPoly, groebnerBasis, order);
-
-                    if(!divisionRes.remainder.support().empty())
-                    {
-                        groebnerBasis.push_back(divisionRes.remainder);
-                        basisExpanded = true;
-                    }
-                }
+                paris.emplace_back(i, j);
             }
         }
-        return groebnerBasis;
+
+        while(!paris.empty())
+        {
+            auto[i, j] = paris.front();
+            paris.pop_front();
+
+            auto SPoly = SPolynomial<T>::compute(groebnerBasis[i], groebnerBasis[j], order);
+            if(SPoly.support().empty()) continue;
+
+            auto divisionRes = Division<T>::divide(SPoly, groebnerBasis, order);
+            const auto& remainder = divisionRes.remainder;
+
+            if (!remainder.support().empty())
+            {
+                size_t newIdx = groebnerBasis.size();
+                for (size_t k = 0; k < newIdx; ++k)
+                {
+                    paris.emplace_back(k, newIdx);
+                }
+                groebnerBasis.push_back(remainder);
+            }
+        }
+        return MinimalBasisTransformer<T>::transform(std::move(groebnerBasis), order);
     }
 
 private:
