@@ -125,7 +125,7 @@ namespace crypto
         [[nodiscard]] bool isIrreducible() const
         {
             int d = degree();
-            if(d<= 0) return false;
+            if(d <= 0) return false;
             if(d == 1) return true;
 
             const uint64_t limit = 1ULL << (d / 2 + 1);

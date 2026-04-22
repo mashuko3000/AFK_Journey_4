@@ -77,6 +77,11 @@ namespace crypto {
 
     bytes_t CipherContext::encrypt_multithreaded(const bytes_t& plaintext, int threads)
     {
+        if(threads <= 0)
+        {
+            throw std::runtime_error("Count of threads should be more than 0");
+        }
+
         if(!mode_)
         {
             throw std::logic_error("[CipherContext] Mode is not initialized");
@@ -94,6 +99,11 @@ namespace crypto {
 
     bytes_t CipherContext::decrypt_multithreaded(const bytes_t& ciphertext, int threads)
     {
+        if(threads <= 0)
+        {
+            throw std::runtime_error("Count of threads should be more than 0");
+        }
+
         if(!mode_)
         {
             throw std::logic_error("[CipherContext] Mode is not initialized");
