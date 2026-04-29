@@ -4,6 +4,10 @@
 
 //#include <bigmath/bigint.hpp>
 #include "boost/multiprecision/cpp_int.hpp"
+#include<set>
+#include <vector>
+
+class IPrimalityTest;
 
 using bigint = boost::multiprecision::cpp_int;
 
@@ -24,6 +28,11 @@ public:
                           bigint b);
     static bigint eulerByFactorization(bigint n);
     static bigint eulerByDFT(bigint n);
+    std::vector<bigint> searchPrimitiveRootInZn(bigint& n, IPrimalityTest& test);
+
+    bigint getPrimeBase(bigint& n, IPrimalityTest& test);
+    void getFactors(const bigint& n, std::set<bigint>& factors, IPrimalityTest& test);
+    bigint rhoPollard(bigint n, IPrimalityTest& test);
 };
 
 #endif //CRYPT_2_NUMBERTHEORYSERVICE_HPP

@@ -21,7 +21,8 @@ add_library(crypto_lib STATIC ${CRYPTO_SOURCES})
 add_executable(crypt_app app/main.cpp
         tests/test_main.cpp
         inc/service/CipherContext.hpp
-        src/service/CipherContext.cpp)
+        src/service/CipherContext.cpp
+        tests/AliceBob.cpp)
 
 target_link_libraries(crypt_app PRIVATE crypto_lib)
 

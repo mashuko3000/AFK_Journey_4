@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "crypt",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "crypt_app::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crypt_app-Debug-c001a8a6ffc90228d9ed.json",
+					"name" : "crypt_app",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "crypto_lib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crypto_lib-Debug-88942d9f9c3620f99554.json",
+					"name" : "crypto_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "crypto_tests::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crypto_tests-Debug-dc7ada38d0e2e9832743.json",
+					"name" : "crypto_tests",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/mashuko/stud/4_sem/CRYPT/CODE/crypt/cmake-build-debug",
+		"source" : "/home/mashuko/stud/4_sem/CRYPT/CODE/crypt"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
