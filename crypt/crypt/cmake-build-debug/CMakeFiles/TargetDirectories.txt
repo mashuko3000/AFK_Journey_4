@@ -1,6 +1,0 @@
-/home/mashuko/stud/4_sem/CRYPT/CODE/crypt/cmake-build-debug/CMakeFiles/crypto_lib.dir
-/home/mashuko/stud/4_sem/CRYPT/CODE/crypt/cmake-build-debug/CMakeFiles/crypt_app.dir
-/home/mashuko/stud/4_sem/CRYPT/CODE/crypt/cmake-build-debug/CMakeFiles/crypto_tests.dir
-/home/mashuko/stud/4_sem/CRYPT/CODE/crypt/cmake-build-debug/CMakeFiles/test.dir
-/home/mashuko/stud/4_sem/CRYPT/CODE/crypt/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/mashuko/stud/4_sem/CRYPT/CODE/crypt/cmake-build-debug/CMakeFiles/rebuild_cache.dir

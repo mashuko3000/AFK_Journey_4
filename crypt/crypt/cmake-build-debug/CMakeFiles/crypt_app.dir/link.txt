@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/crypt_app.dir/app/main.cpp.o CMakeFiles/crypt_app.dir/tests/test_main.cpp.o CMakeFiles/crypt_app.dir/src/service/CipherContext.cpp.o CMakeFiles/crypt_app.dir/tests/AliceBob.cpp.o -o crypt_app  libcrypto_lib.a 
