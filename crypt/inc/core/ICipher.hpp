@@ -5,7 +5,7 @@
 #ifndef CRYPT_ICIPHER_HPP
 #define CRYPT_ICIPHER_HPP
 
-#include"common/CryptoTypes.hpp"
+#include"../common/CryptoTypes.hpp"
 #include<string>
 
 namespace crypto

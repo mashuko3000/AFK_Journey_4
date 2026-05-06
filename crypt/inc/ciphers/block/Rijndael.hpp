@@ -5,9 +5,9 @@
 #ifndef CRYPT_RIJNDAEL_HPP
 #define CRYPT_RIJNDAEL_HPP
 
-#include"common/RijndaelTypes.hpp"
+#include"../../common/RijndaelTypes.hpp"
 #include"../../layers/RijndaelSBox.hpp"
-#include"core/IBlockCipher.hpp"
+#include"../../core/IBlockCipher.hpp"
 #include "../../math/GaloisField.hpp"
 
 

@@ -5,7 +5,7 @@
 #ifndef CRYPT_IBLOCKCIPHER_HPP
 #define CRYPT_IBLOCKCIPHER_HPP
 
-#include "core/ICipher.hpp"
+#include "../core/ICipher.hpp"
 
 namespace crypto
 {

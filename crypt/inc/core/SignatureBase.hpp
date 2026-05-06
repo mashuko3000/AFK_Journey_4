@@ -34,7 +34,7 @@ namespace crypto
         [[nodiscard]] bool verify(const bytes_t& message, const bytes_t& signature) override
         {
             if(!Pub_) throw std::runtime_error("Public key not set for signing");
-            return verifyImpl(Pub_.get_key(), message, signature);
+            return verifyImpl(Pub_->get_key(), message, signature);
         }
 
     public:

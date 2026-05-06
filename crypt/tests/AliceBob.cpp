@@ -120,7 +120,7 @@ void runBob() {
     auto decMarsMsg = marsCtx.decrypt(encMarsMsg);
     std::cout << "Decrypted (MARS): " << std::string(decMarsMsg.begin(), decMarsMsg.end()) << "\n";
 }
-
+/*
 int main(int argc, char* argv[]) {
     if (argc > 1 && std::string(argv[1]) == "client") {
         runBob();
@@ -129,4 +129,4 @@ int main(int argc, char* argv[]) {
         runAlice();
     }
     return 0;
-}
+}*/

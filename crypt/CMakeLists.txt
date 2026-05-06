@@ -3,35 +3,38 @@ project(crypt)
 
 set(CMAKE_CXX_STANDARD 17)
 
-find_package(Boost REQUIRED)
-
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/inc)
+find_package(Boost REQUIRED COMPONENTS system)
+find_package(GTest REQUIRED)
+find_package(OpenSSL REQUIRED)
 
 file(GLOB_RECURSE CRYPTO_SOURCES
         "src/*.cpp"
-        "src/*.hpp"
-        "inc/*.hpp"
-        "inc/*.h"
+        "src/*.c"
 )
-
-list(FILTER CRYPTO_SOURCES EXCLUDE REGEX "main.cpp")
 
 add_library(crypto_lib STATIC ${CRYPTO_SOURCES})
 
-add_executable(crypt_app app/main.cpp
-        tests/test_main.cpp
-        inc/service/CipherContext.hpp
-        src/service/CipherContext.cpp
-        tests/AliceBob.cpp)
-
-target_link_libraries(crypt_app PRIVATE crypto_lib)
-
-target_include_directories(crypt_app PRIVATE
+target_include_directories(crypto_lib PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/inc
+        ${CMAKE_CURRENT_SOURCE_DIR}/src
+        ${OpenSSL_INCLUDE_DIR}
         ${Boost_INCLUDE_DIRS}
 )
 
-enable_testing()
-find_package(GTest REQUIRED)
-add_executable(crypto_tests tests/test_main.cpp)
-target_link_libraries(crypto_tests PRIVATE crypto_lib GTest::gtest_main)
+target_link_libraries(crypto_lib PUBLIC
+        OpenSSL::Crypto
+        Boost::system
+)
 
+add_executable(crypt_app app/main.cpp)
+target_link_libraries(crypt_app PRIVATE crypto_lib)
+
+enable_testing()
+add_executable(crypto_tests
+        tests/test_main.cpp
+        tests/AliceBob.cpp
+)
+target_link_libraries(crypto_tests PRIVATE
+        crypto_lib
+        GTest::gtest_main
+)

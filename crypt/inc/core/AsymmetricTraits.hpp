@@ -10,6 +10,13 @@
 
 namespace crypto
 {
+    struct RabinTraits
+    {
+        static constexpr const char* ALGO_NAME = "Rabin";
+        struct PublicKeyData {BigInt n;};
+        struct PrivateKeyData {BigInt p, q;};
+    };
+
     struct ElGamalTraits
     {
         static constexpr const char* ALGO_NAME = "ElGamal";
